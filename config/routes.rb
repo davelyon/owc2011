@@ -40,12 +40,15 @@ Owc2011::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-  resources :donations do
+  resources :donation_campaigns
+
+  resources :donations, :only => [:index] do
     collection do
       get :successful
       post '/successful' => redirect('/donations/successful') #paypal is going to redirect with POST
     end
   end
+
 
   # Sample resource route within a namespace:
   #   namespace :admin do

@@ -33,6 +33,6 @@
 </html>
 Welcome
 
-<% @donations.each do |donation| %>
+<% @donation_campaigns.each do |donation| %>
   <%= "#{donation.title} - #{donation.amount} - #{donation.description}" %>
 <% end %>
