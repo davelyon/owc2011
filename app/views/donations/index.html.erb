@@ -1,7 +1,27 @@
-Every dollar counts in the fight to prevent child abuse. To make a donation of your choice, please click on the button below. Thank you!
+<section>
+  <h1>PayPay Donations</h1>
+  <p>Every dollar counts in the fight to prevent child abuse. To make a donation of your choice, please click on the button below. Thank you!</p>
+  <%= paypal_button %>
+</section>
 
-<%= paypal_button %>
 
-Donation Campaigns:
+<section>
+  <h1>Donation Campaigns</h1>
 
-<%= render :partial => "donation", :collection => @donations %>
+  <%= render :partial => "donation", :collection => @donations %>
+</section>
+
+<section>
+<h1>Mail in Donations</h1>
+<p>
+  If you would like to make a charitable donation, please make the check out to Kids Have Hope and send it to:
+
+  <address>
+    Kids Have Hope
+
+    P.O. Box 221066
+
+    Chicago, IL 60622
+  </address>
+</p>
+</section>
