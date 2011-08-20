@@ -1,4 +1,6 @@
 Owc2011::Application.routes.draw do
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -38,7 +40,11 @@ Owc2011::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-  resources :donations
+  resources :donations do
+    collection do
+      get :successful
+    end
+  end
 
   # Sample resource route within a namespace:
   #   namespace :admin do
@@ -49,7 +55,7 @@ Owc2011::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "landing#index"
 
   # See how all your routes lay out with "rake routes"
 
