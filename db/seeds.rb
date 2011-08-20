@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+
+if User.find_by_email("admin@kidshavehope.org").blank?
+  User.create!(
+    :email => "admin@kidshavehope.org",
+    :password => "password",
+    :password_confirmation => "password")
+end
