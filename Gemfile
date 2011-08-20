@@ -1,15 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
-
 gem 'pg'
+gem 'rails', '3.0.10'
 gem 'sqlite3' # STOP HURTING ME WITH THIS
-gem 'devise'
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'capybara'
-  gem 'pickle'
+  gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'pickle'
+  gem 'rspec-rails'
 end
