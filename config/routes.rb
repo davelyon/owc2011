@@ -40,7 +40,11 @@ Owc2011::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-  resources :donations, :only => :index
+  resources :donations, :only => :index do
+    collection do
+      get :successful
+    end
+  end
   
   # Sample resource route within a namespace:
   #   namespace :admin do
