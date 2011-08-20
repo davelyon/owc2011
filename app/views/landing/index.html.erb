@@ -11,17 +11,17 @@
           <img src="" alt="Kids Have Hope Logo" />
         </a>
         <ul>
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>Subscribe</li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Subscribe</a></li>
         </ul>
         <ul>
-          <li>Services</li>
-          <li>About</li>
-          <li>Testimonials</li>
-          <li>Events</li>
-          <li>Donate</li>
-          <li>Contact Us</li>
+          <li><a href=#>Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </header>
       <div role="main">
@@ -31,3 +31,8 @@
     </div>
   </body>
 </html>
+Welcome
+
+<% @donations.each do |donation| %>
+  <%= "#{donation.title} - #{donation.amount} - #{donation.description}" %>
+<% end %>
