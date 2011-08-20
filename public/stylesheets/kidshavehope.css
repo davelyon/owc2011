@@ -1,0 +1,92 @@
+/*
+      .---.`                                      
+   -oyhhhhhhy+:`                                  
+   .--.-/yhhhhhy+.                                
+         `shhhhhhy+`                              
+          -hhhhhhhhs.                             
+           shhhhhhhhs                             
+           /hhhhhhhhh/ `                          
+           `yhhhhhhhho -                          
+            .shhhhhhho .   `.`                    
+            `:yhhhhhh/ . ..``-/osyyyyyso/-`       
+           -yhhhhhhhy:++`./shhhhhhhhhhhhhhys/`    
+           /yhhhhhho+yy+ohhhhhhhhhhhhhhhhhhhhy+`  
+          -yhhhhhh+oyy/yhhhhhhhhhhhhhhhhyysyhhhs` 
+         -hhhhhhh+oys/yhhhhhhyyyyyys+:-`    `/hh/ 
+         :yhhhhy/+y/oyhhhhhhh-                /h/ 
+ :sso++oshyo+:-`os.shhhhhhy+/`                 .  
+  `-:///-.     ./`.hhhhhho/                       
+            `.`    shhhyo`                        
+            `..    /hy.                           
+     `   --        -hy`                           
+--  .-`  ``         ohs.                          
+                     /yy/                         
+                       .-`
+
+Title: kidshavehope.css
+
+Contents: 
+
+1) =GLOBAL
+2) =TYPOGRAPHY
+3) =STRUCTURAL
+4) =LISTS
+
+Modular Scale: 
+
+http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
+
+PIXELS     EMS      % OF 13
+
+1192.803 | 74.55  | 9,175.408
+894.826  | 55.927 | 6,883.277
+671.287  | 41.955 | 5,163.746
+503.591  | 31.474 | 3,873.777
+377.788  | 23.612 | 2,906.062
+283.412  | 17.713 | 2,180.092
+212.612  | 13.288 | 1,635.477
+159.499  | 9.969  | 1,226.915
+119.654  | 7.478  | 920.415
+89.763   | 5.61   | 690.485
+67.339   | 4.209  | 517.992
+50.517   | 3.157  | 388.592
+37.897   | 2.369  | 291.515
+28.43    | 1.777  | 218.692
+21.328   | 1.333  | 164.062
+16       | 1      | 123.077
+12.003   | 0.75   | 92.331
+9.005    | 0.563  | 69.269
+6.755    | 0.422  | 51.962
+5.068    | 0.317  | 38.985
+3.802    | 0.238  | 29.246
+2.852    | 0.178  | 21.938
+2.14     | 0.134  | 16.462
+1.605    | 0.1    | 12.346
+1.204    | 0.075  | 9.262
+
+Colors:
+*/
+
+/* =G L O B A L
+__________________________________________________________ */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 10px;
+}
+
+div[role="document"] {
+  font-size: 1.6em;
+  line-height: 1.8em;
+  margin: 0 auto;
+  width: 64em;
+}
+
+/* =T Y P O G R A P H Y
+__________________________________________________________ */
+
+/* =S T R U C T U R A L
+__________________________________________________________ */
+
+/* =L I S T S
+__________________________________________________________ */

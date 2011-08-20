@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Kids Have Hope</title>
-    <%= stylesheet_link_tag :all %>
+    <%= stylesheet_link_tag "reset", "kidshavehope"  %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
   </head>
@@ -20,28 +20,34 @@
         <ul>
           <li><%= link_to 'Services', services_path %></li>
           <li><%= link_to 'About', about_path %></li>
-          <li><%= link_to 'Testimonials', testimonials_path %></li>
+        </ul>
+        <ul>
           <li><a href="#">Events</a></li>
           <li><%= link_to 'Donate', donations_path %></li>
-          <li><%= link_to 'Contact Us', new_contact_request_path %></li>
+          <li><%= link_to 'Store', store_path %></li>
         </ul>
+        <ul>
+          <li><%= link_to 'Contact Us', new_contact_request_path %></li>
+          <li><%= link_to 'Testimonials', testimonials_path %></li>
+        </ul>
+      </ul>
       <%- flash.each do |name, msg| %>
         <p class="#{name}"> <%= msg %> </p>
       <%- end %>
-      </header> 
-      <div role="main">
+    </header> 
+    <div role="main">
 
-      </div>
-      <%= yield %>
-      <footer role=contentinfo">
-        <ul>
-          <li>Child Abuse Prevention | Kids Have Hope</li>
-          <li>Chicago, IL</li>
-          <li>melicurk@kidshavehope.org</li>
-          <li>1-888-806-8481</li>
-          <li>Copyright 2011 Kids Have Hope. All rights reserved</li>
-        </ul>
-      </footer>
     </div>
-  </body>
+    <%= yield %>
+    <footer role=contentinfo">
+      <ul>
+        <li>Child Abuse Prevention | Kids Have Hope</li>
+        <li>Chicago, IL</li>
+        <li>melicurk@kidshavehope.org</li>
+        <li>1-888-806-8481</li>
+        <li>Copyright 2011 Kids Have Hope. All rights reserved</li>
+      </ul>
+    </footer>
+  </div>
+</body>
 </html>
