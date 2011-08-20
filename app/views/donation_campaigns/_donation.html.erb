@@ -1,1 +1,3 @@
-<strong> <%= @donation_campaign.title %> </strong>
+<% @donation_campaigns.each do |donation| %> 
+  <%= donation.title %>
+<%end%>
