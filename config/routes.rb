@@ -39,6 +39,8 @@ Owc2011::Application.routes.draw do
   #     end
   #   end
 
+  resources :donations, :only => :index
+  
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
