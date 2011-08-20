@@ -1,6 +1,6 @@
 class LandingController < ApplicationController
-  
+
   def index
-    @donations = DonationCampaign.all
+    @donation_campaigns = DonationCampaign.all
   end
 end

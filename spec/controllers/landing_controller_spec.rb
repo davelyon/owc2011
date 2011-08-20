@@ -7,6 +7,6 @@ describe LandingController do
     DonationCampaign.should_receive(:all).and_return([donation])
 
     get :index
-    assigns[:donations].should == [donation]
+    assigns[:donation_campaigns].should == [donation]
   end
 end

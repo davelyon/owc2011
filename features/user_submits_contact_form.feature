@@ -22,6 +22,9 @@ Feature: User submits contact form
     Given I am on the home page
     When I follow "Contact Us"
 
+  Scenario: contact information shown
+    Then I should see "888-806-8481 - Kids Have Hope"
+
   Scenario: happy path
     Given I select "General question" from "Contact types"
     And I fill in "My inquiry" for "Message"
