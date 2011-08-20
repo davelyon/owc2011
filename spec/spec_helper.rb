@@ -25,3 +25,19 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 end
+
+
+def sign_in_admin_user
+  user = Admin.find_by_email("admin@kidshavehope.com")
+  if user.blank?
+    user = Admin.create!(
+      :email => "admin@kidshavehope.com",
+      :password => "password",
+      :password_confirmation => "password",
+      :role => "Admin"
+    )
+  else
+    user
+  end
+  sign_in user
+end

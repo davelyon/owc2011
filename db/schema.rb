@@ -47,4 +47,5 @@ ActiveRecord::Schema.define(:version => 20110820173959) do
     t.datetime "updated_at"
     t.string   "location"
   end
+
 end

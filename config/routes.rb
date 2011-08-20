@@ -2,6 +2,9 @@ Owc2011::Application.routes.draw do
   devise_for :admin  
   
   match 'admin' => "admin#index"
+  namespace "admin" do
+    resources :fundraisers
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
