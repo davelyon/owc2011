@@ -17,3 +17,7 @@ Given /^I (?:am )?sign(?:ed)? in as "([^"]*)" with password "([^"]*)"$/ do |emai
     And I press "Sign in"
   }
 end
+
+Given /^I am signed in as "([^"]*)"$/ do |email|
+  Given %{I am signed in as "#{email}" with password "password"}
+end

@@ -21,14 +21,32 @@ Feature: Workshop events
       | Good Touch, Bad Touch |
 
   Scenario: create
-    When I follow "workshop events"
+    Given I follow "workshop events"
     And I follow "create"
     And I fill in the following:
 			| Name        | Good Touch, Bad Touch              |
 			| Location    | Caleb's pad                        |
 			| Description | A seminar on Good Touch, Bad Touch |
 		And I select "2011-08-20" as the "Start at" date and time
-		And I press "Create"
+		When I press "Create"
 		Then I should see the following list:
 			| Good Touch, Bad Touch |
 		And I should see "Event successfully created"
+
+	Scenario: edit
+		Given an event exists with name: "Good Touch, Bad Touch"
+    And I follow "workshop events"
+		And I follow "edit" within the "Good Touch, Bad Touch" section
+		And I fill in "Name" with "herp derp"
+		When I press "Update"
+		Then I should see the following list:
+			| herp derp |
+		And I should see "Event successfully updated"
+
+	Scenario: destroy
+		Given an event exists with name: "Good Touch, Bad Touch"
+    And I follow "workshop events"
+		When I follow "delete" within the "Good Touch, Bad Touch" section
+		Then I should be on the admin events page
+		And I should see "Event successfully deleted"
+		And I should not see "Good Touch, Bad Touch"

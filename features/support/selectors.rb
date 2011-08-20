@@ -11,6 +11,9 @@ module HtmlSelectorsHelpers
     when "the page"
       "html > body"
 
+    when /^the "(.*)" section$/
+      sections = %w(h1 h2 h3 h4 h5 h6 legend caption dt strong p label span)
+      [:xpath, ".//*[(#{sections.join '|'})/descendant-or-self::*[normalize-space(text()) = '#{$1}']]"]
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

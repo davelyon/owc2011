@@ -1,6 +1,10 @@
 <ul>
   <%= @events.each do |event| -%>
-    <li><%= event.name %></li>
+    <li>
+      <span><%= event.name %></span>
+      <%= link_to 'edit', edit_admin_event_path(event) %>
+      <%= link_to 'delete', [:admin, event], method: :delete %>
+    </li>
   <% end -%>
 </ul>
 <%= link_to 'create', new_admin_event_path %>

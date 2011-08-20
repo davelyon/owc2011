@@ -209,21 +209,3 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
-
-Given /^I am signed in as an admin$/ do
-  @admin = Admin.create(email: "foo@bar.baz", password: "password", password_confirmation: "password")
-  And %Q{I am signed in as "#{@admin.email}"}
-end
-
-Given /^I am signed in as "([^"]*)"$/ do |email|
-  Given %{I am signed in as "#{email}" with password "password"}
-end
-
-Given /^I (?:am )?sign(?:ed)? in as "([^"]*)" with password "([^"]*)"$/ do |email, password|
-  steps %Q{
-    When I go to the new admin session page
-    And I fill in "Email" with "#{email}"
-    And I fill in "Password" with "#{password}"
-    And I press "Sign in"
-  }
-end
