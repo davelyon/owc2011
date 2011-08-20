@@ -23,7 +23,10 @@ Feature: User submits contact form
     When I follow "Contact Us"
 
   Scenario: contact information shown
-    Then I should see "888-806-8481 - Kids Have Hope"
+    Then I should see "888-806-8481"
+    And I should see "Kids Have Hope"
+    And I should see "P.O. Box 221066"
+    And I should see "Chicago, IL 60622"
 
   Scenario: happy path
     Given I select "General question" from "Contact types"
