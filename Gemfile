@@ -4,6 +4,7 @@ gem 'rails', '3.0.10'
 
 gem 'pg'
 gem 'devise'
+gem 'sqlite3'
 
 group :development, :test do
   gem 'rspec-rails'
