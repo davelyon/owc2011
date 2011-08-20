@@ -42,6 +42,7 @@ Owc2011::Application.routes.draw do
   #   end
   resources :donations do
     collection do
+      post '/successful' => redirect('/donations/successful') #paypal is going to redirect with POST
       get :successful
     end
   end
