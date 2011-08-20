@@ -1,1 +1,5 @@
 Welcome
+
+<% @donations.each do |donation| %>
+  <%= "#{donation.title} - #{donation.amount} - #{donation.description}" %>
+<% end %>
