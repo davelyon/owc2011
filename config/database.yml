@@ -1,10 +1,10 @@
 development:
-  adapter: sqlite3
-  database: db/owc2011_development.sqlite3
+  adapter: postgresql
+  database: owc2011_development
 
 test: &test
-  adapter: sqlite3
-  database: db/owc2011_test.sqlite3
+  adapter: postgresql
+  database: owc2011_test
 
 production:
   adapter: postgresql
