@@ -4,7 +4,9 @@ gem 'devise'
 gem 'heroku'
 gem 'pg'
 gem 'rails', '3.0.10'
-gem 'sqlite3'
+gem 'sqlite3' # STOP HURTING ME WITH THIS
+gem 'twitter'
+gem 'heroku'
 
 group :development, :test do
   gem 'capybara'
@@ -17,3 +19,4 @@ group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'shoulda-matchers'
 end
+  
