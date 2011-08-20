@@ -106,6 +106,7 @@ __________________________________________________________ */
 header {
   border-bottom: 4px double rgba(178,142,190,0.75);
   overflow: hidden;
+  margin: 0 0 2.5em 0;
   padding: 0 0 1.1875em 0;
 }
 
@@ -119,10 +120,22 @@ header a#logo {
 }
 
 nav {
-  padding: 1.25em 0 0 0;
+  float: right;
   overflow: hidden;
+  padding: 1.25em 0 0 0;
+  width: 42em;
 }
 
+section {
+  float: left;
+  margin: 0 2em 0 0;
+  width: 42em;
+}
+
+aside {
+  float: left;
+  width: 20em;
+}
 
 /* =L I S T S
 __________________________________________________________ */
@@ -131,4 +144,8 @@ nav ul {
   float: left;
   margin: 0 2em 0 0;
   width: 9em;
+}
+
+nav ul:last-of-type {
+  margin:0;
 }
