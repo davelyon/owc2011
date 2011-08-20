@@ -5,6 +5,8 @@ gem 'pg'
 gem 'rails', '3.0.10'
 gem 'sqlite3' # STOP HURTING ME WITH THIS
 
+gem 'heroku'
+
 group :development, :test do
   gem 'capybara'
   gem 'cucumber-rails'
