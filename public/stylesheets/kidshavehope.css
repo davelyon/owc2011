@@ -64,29 +64,71 @@ PIXELS     EMS      % OF 13
 1.605    | 0.1    | 12.346
 1.204    | 0.075  | 9.262
 
+Grid:
+
+144px col (9em)
+32px gutter (2em)
+
 Colors:
+
+rgb(1278,142,190) - Light Purple
+
 */
 
 /* =G L O B A L
 __________________________________________________________ */
 
 body {
+  background: url(/images/background/grid.jpg) repeat-y center top;
   font-family: helvetica, arial, sans-serif;
   font-size: 10px;
+  margin: 4em auto 0 auto;
+  width:102.4em
 }
 
 div[role="document"] {
   font-size: 1.6em;
-  line-height: 1.8em;
+  line-height: 1.25em;
   margin: 0 auto;
-  width: 64em;
+  width: 100%;
 }
 
 /* =T Y P O G R A P H Y
 __________________________________________________________ */
 
+
+
+
+
 /* =S T R U C T U R A L
 __________________________________________________________ */
 
+header {
+  border-bottom: 4px double rgba(178,142,190,0.75);
+  overflow: hidden;
+  padding: 0 0 1.1875em 0;
+}
+
+header a#logo {  
+  background: url(/images/logo/logo.png) no-repeat left top;
+  display: block;
+  float: left;
+  height: 12.5em;
+  margin: 0 2em 0 0;
+  width: 9em;
+}
+
+nav {
+  padding: 1.25em 0 0 0;
+  overflow: hidden;
+}
+
+
 /* =L I S T S
 __________________________________________________________ */
+
+nav ul {  
+  float: left;
+  margin: 0 2em 0 0;
+  width: 9em;
+}

@@ -9,28 +9,32 @@
   <body>
     <div role="document">
       <header>
-        <a href="#" title="Back to Home">
-          <img src="" alt="Kids Have Hope Logo" />
+        <a href="#" id="logo" title="Back to Home">
+          <img src="images/logo/logo.png"
+               alt="Kids Have Hope Logo"
+               height="204"
+               width="144" />
         </a>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Subscribe</a></li>
-        </ul>
-        <ul>
-          <li><%= link_to 'Services', services_path %></li>
-          <li><%= link_to 'About', about_path %></li>
-        </ul>
-        <ul>
-          <li><a href="#">Events</a></li>
-          <li><%= link_to 'Donate', donations_path %></li>
-          <li><%= link_to 'Store', store_path %></li>
-        </ul>
-        <ul>
-          <li><%= link_to 'Contact Us', new_contact_request_path %></li>
-          <li><%= link_to 'Testimonials', testimonials_path %></li>
-        </ul>
-      </ul>
+        <nav role="navigation">
+          <ul>
+            <li><%= link_to 'Services', services_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+          </ul>
+          <ul>
+            <li><a href="#">Events</a></li>
+            <li><%= link_to 'Donate', donations_path %></li>
+            <li><%= link_to 'Store', store_path %></li>
+          </ul>
+          <ul>
+            <li><%= link_to 'Contact Us', new_contact_request_path %></li>
+            <li><%= link_to 'Testimonials', testimonials_path %></li>
+          </ul>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Subscribe</a></li>
+          </ul>
+        </nav>
       <%- flash.each do |name, msg| %>
         <p class="#{name}"> <%= msg %> </p>
       <%- end %>
