@@ -4,6 +4,9 @@ Owc2011::Application.routes.draw do
   match 'admin' => "admin#index"
   match 'about' => "main#about"
   match 'services' => "main#services"
+  match 'testimonials' => "main#testimonials"
+  match 'donate' => "main#donate"
+  match 'store' => "main#store"
 
   namespace "admin" do
     resources :fundraisers
