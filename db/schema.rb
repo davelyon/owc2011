@@ -13,6 +13,18 @@
 
 ActiveRecord::Schema.define(:version => 20110820174007) do
 
+  create_table "contact_requests", :force => true do |t|
+    t.string   "contact_type"
+    t.text     "message"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "organization"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
