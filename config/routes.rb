@@ -3,11 +3,28 @@ Owc2011::Application.routes.draw do
   
   match 'admin' => "admin#index", as: :admin_root
 
+  match 'admin' => "admin#index"
+  match 'about' => "main#about"
+  match 'services' => "main#services"
+  match 'testimonials' => "main#testimonials"
+  match 'donate' => "main#donate"
+  match 'store' => "main#store"
+  
+  
   namespace "admin" do
     resources :donation_campaigns
     resources :events, except: :show
     resources :fundraisers do
       resources :tickets
+    end
+    resources :fundraisers do      
+      resources :tickets
+    end
+    
+    controller :twitter do
+      match 'tweet', :as => :new_tweet
+      get 'post_tweet', :to => :post_tweet, :as => :post_tweet
+      match '/:action'
     end
   end
 

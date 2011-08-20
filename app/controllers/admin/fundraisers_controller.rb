@@ -1,4 +1,7 @@
 class Admin::FundraisersController < AdminController
+  before_filter :authenticate_admin!
+  before_filter :load_fundraiser
+
   def index
     @fundraisers = Fundraiser.all
   end
@@ -10,19 +13,17 @@ class Admin::FundraisersController < AdminController
   def create
     @fundraiser = Fundraiser.new(params[:fundraiser])
     if @fundraiser.save
-      redirect_to admin_fundraisers_path, :notice => "Fundraiser Added!"
+      redirect_to admin_new_tweet_path(:message => "Join us for #{@fundraiser.name} on #{@fundraiser.time.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope", :return_url => "admin/fundraiser"), :notice => "Fundraiser Added!"
     else
       render :new
     end
   end
 
   def edit
-    @fundraiser = Fundraiser.find(params[:id])
     render :new
   end
 
   def update
-    @fundraiser = Fundraiser.find_by_id(params[:id])
     if @fundraiser.update_attributes(params[:fundraiser])
       redirect_to admin_fundraisers_path, :notice => "Fundraiser Updated!"
     else
@@ -31,12 +32,16 @@ class Admin::FundraisersController < AdminController
   end
 
   def destroy
-    @fundraiser = Fundraiser.find_by_id(params[:id])
     @fundraiser.destroy
     redirect_to admin_fundraisers_path
   end
 
   def show
+  end
+  
+  private
+  
+  def load_fundraiser
     @fundraiser = Fundraiser.find_by_id(params[:id])
   end
 end

@@ -7,8 +7,8 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 
-if User.find_by_email("admin@kidshavehope.org").blank?
-  User.create!(
+if Admin.find_by_email("admin@kidshavehope.org").blank?
+  Admin.create!(
     :email => "admin@kidshavehope.org",
     :password => "password",
     :password_confirmation => "password")
