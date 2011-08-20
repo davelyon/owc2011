@@ -5,11 +5,11 @@ class Admin::FundraisersController < ApplicationController
     @fundraisers = Fundraiser.all
   end
 
-  
+
   def new
     @fundraiser = Fundraiser.new
   end
-  
+
   def create
     @fundraiser = Fundraiser.new(params[:fundraiser])
     if @fundraiser.save
@@ -18,12 +18,12 @@ class Admin::FundraisersController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @fundraiser = Fundraiser.find(params[:id])
     render :new
   end
-  
+
   def update
     @fundraiser = Fundraiser.find_by_id(params[:id])
     if @fundraiser.update_attributes(params[:fundraiser])
@@ -32,7 +32,7 @@ class Admin::FundraisersController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
     @fundraiser = Fundraiser.find_by_id(params[:id])
     @fundraiser.destroy
