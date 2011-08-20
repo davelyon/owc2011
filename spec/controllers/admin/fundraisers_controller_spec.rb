@@ -114,14 +114,6 @@ describe Admin::FundraisersController do
         response.should redirect_to admin_fundraisers_path
       end
     end
-  
-    # context "with invalid params" do
-    #   it "re-renders 'new' if update fails" do
-    #     put :update, "id" => fundraiser.id.to_s, "fundraiser" => { "name" => "" }
-    #   
-    #     response.should render_template("new")
-    #   end
-    # end
   end
   
   context "DELETE destroy" do
@@ -134,5 +126,15 @@ describe Admin::FundraisersController do
       Fundraiser.find_by_id(id).should be_nil
       response.should redirect_to admin_fundraisers_path
     end
+  end
+  
+  context "show" do
+    let(:fundraiser) { Fundraiser.create!(:name => "Name") }
+    it "loads the fundraiser" do
+      
+      get :show, :id => fundraiser.id
+      assigns[:fundraiser].should == fundraiser
+    end
+    
   end
 end

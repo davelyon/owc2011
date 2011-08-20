@@ -60,4 +60,14 @@ ActiveRecord::Schema.define(:version => 20110820174007) do
     t.string   "location"
   end
 
+  create_table "tickets", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.decimal  "amount"
+    t.integer  "quantity"
+    t.integer  "fundraiser_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

@@ -1,3 +1,15 @@
-<%= form_for @fundraiser do |form| %>
+<%= form_for [:admin, @fundraiser] do |form| %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br />
+  <%= form.label :description %>
+  <%= form.text_area :description, :size => "30x7"%>
+  <br />
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+  <br />
+
+  <%= form.submit "Save"%>
   
 <% end %>

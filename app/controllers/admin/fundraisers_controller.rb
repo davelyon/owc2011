@@ -38,4 +38,8 @@ class Admin::FundraisersController < ApplicationController
     @fundraiser.destroy
     redirect_to admin_fundraisers_path
   end
+  
+  def show
+    @fundraiser = Fundraiser.find_by_id(params[:id])
+  end
 end

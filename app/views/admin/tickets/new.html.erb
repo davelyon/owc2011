@@ -1,0 +1,20 @@
+<%= form_for [:admin, @fundraiser, @ticket] do |form| %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <br />
+  <%= form.label :description %>
+  <%= form.text_area :description, :size => "30x7"%>
+  <br />
+  <%= form.label :amount %>
+  <%= form.text_field :amount %>
+  <br />
+  
+  <%= form.label :quantity %>
+  <%= form.text_field :quantity %>
+  <br />
+  
+
+  <%= form.submit "Save"%>
+  
+<% end %>

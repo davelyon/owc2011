@@ -1,0 +1,29 @@
+<h1> All Tickets for <%=@fundraiser.name%></h1>
+<table>
+  <colgroup>
+    <col></col>
+    <col></col>
+    <col></col>
+    <col></col>
+  </colgroup>
+  <tr>
+    <th> Name </th>
+    <th> Amount</th>
+    <th> Quantity</th>
+    <th> </th>
+  </tr>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= link_to ticket.title, admin_fundraiser_ticket_path(@fundraiser, ticket)%></td>
+        <td><%=  ticket.amount%></td>
+        <td><%=  ticket.quantity%></td>
+        <td><%= link_to "Edit", edit_admin_fundraiser_ticket_path(@fundraiser, ticket)%></td>
+        <td><%= button_to "Delete", admin_fundraiser_ticket_path(@fundraiser, ticket), :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <%end%>
+</table>
+<div class="button">
+  <%= link_to "Add a new ticket", new_admin_fundraiser_ticket_path%>
+  <%= link_to "Back to fundraiser", admin_fundraisers_path%>
+</div>
+    

@@ -6,8 +6,11 @@ Owc2011::Application.routes.draw do
   match 'services' => "main#services"
 
   namespace "admin" do
-    resources :fundraisers
     resources :donation_campaigns
+    resources :fundraisers do
+      resources :tickets
+    end
+
   end
 
   resources :donation_campaigns
