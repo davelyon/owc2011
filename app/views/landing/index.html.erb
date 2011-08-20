@@ -1,96 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>Kids Have Hope</title>
-  </head>
-  <body>
-    <div role="document">
-      <header>
-        <a href="#" title="Back to Home">
-          <img src="" alt="Kids Have Hope Logo" />
-        </a>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Subscribe</a></li>
-        </ul>
-        <ul>
-          <li><a href=#>Services</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Donate</a></li>
-          <li><%= link_to 'Contact Us', new_contact_request_path %></li>
-        </ul>
-      </header>
-      <div role="main">
-        <section>
-          <h1>Kids Have Hope, a Chicago Non-Profit Organization</h1>
-          <h2>
-            Kids Have Hope is a 501c3 nonprofit organization dedicated to 
-            preventing child physical abuse and sexual abuse through 
-            empowerment and education.
-          </h2>
-          <h3>What We Do</h3>
-          <p>
-            Kids Have Hope provides an evidence-based curriculum 
-            on prevention and awareness of child sexual abuse including; 
-            sexual abuse, emotional abuse, physical abuse, violence 
-            prevention and bullying. We provide this service to students 
-            in  pre-school through 6th grade.
-          </p>
-          <p>
-            We offer educational in-services to schools and 
-            communities which help prevent and detect child sexual 
-            abuse by raising awareness and implementing effective 
-            strategies.  Our information sessions are designed for 
-            teachers, faculty, parents, health care providers and 
-            community members who want to prevent and detect child 
-            sexual abuse.
-          </p>
-          <h3>Request Professional Assistance</h3>
-          <p>
-            We are available to answer questions about child abuse or 
-            you can setup a meeting with one of our Licensed Social 
-            Workers who can explain, in detail, our various programs.
-            Contact us for an initial meeting and take a stand to stop child 
-            sexual abuse.
-          </p>
-        </section>
-        <aside>
-          <h4>Child Sexual Abuse Prevention</h4> 
-          <h5>Handling a Child's Report of Abuse</h5>
-          <ul>
-            <ol>Remain calm.</ol>
-            <ol><em>Believe</em> the child</ol>
-            <ol><em>Listen</em> to the child</ol>
-            <ol>Reassure the child the did nothing wrong</ol>
-            <ol>Make sure the child is safe.</ol>
-            <ol><strong>Get Help</strong></ol>
-          </ul>
-          <p>
-            To report child physical or sexual abuse in Illinois call: 
-            <strong>1-800-252-2873</strong>
-          </p>
-          <p>
-            Outside of Illinois call: <strong>1-800-422-4453</strong>
-          </p>
-        </aside>
-      </div>
-      <footer role=contentinfo">
-        <ul>
-          <li>Child Abuse Prevention | Kids Have Hope</li>
-          <li>Chicago, IL</li>
-          <li>melicurk@kidshavehope.org</li>
-          <li>1-888-806-8481</li>
-          <li>Copyright 2011 Kids Have Hope. All rights reserved</li>
-        </ul>
-      </footer>
-    </div>
-  </body>
-</html>
-<% @donation_campaigns.each do |donation| %>
-  <%= "#{donation.title} - #{donation.amount} - #{donation.description}" %>
-<% end %>
+<section>
+  <h1>Kids Have Hope, a Chicago Non-Profit Organization</h1>
+  <h2>
+    Kids Have Hope is a 501c3 nonprofit organization dedicated to 
+    preventing child physical abuse and sexual abuse through 
+    empowerment and education.
+  </h2>
+  <h3>What We Do</h3>
+  <p>
+    Kids Have Hope provides an evidence-based curriculum 
+    on prevention and awareness of child sexual abuse including; 
+    sexual abuse, emotional abuse, physical abuse, violence 
+    prevention and bullying. We provide this service to students 
+    in  pre-school through 6th grade.
+  </p>
+  <p>
+    We offer educational in-services to schools and 
+    communities which help prevent and detect child sexual 
+    abuse by raising awareness and implementing effective 
+    strategies.  Our information sessions are designed for 
+    teachers, faculty, parents, health care providers and 
+    community members who want to prevent and detect child 
+    sexual abuse.
+  </p>
+  <h3>Request Professional Assistance</h3>
+  <p>
+    We are available to answer questions about child abuse or 
+    you can setup a meeting with one of our Licensed Social 
+    Workers who can explain, in detail, our various programs.
+    Contact us for an initial meeting and take a stand to stop child 
+    sexual abuse.
+  </p>
+</section>
+<aside>
+  <h4>Child Sexual Abuse Prevention</h4> 
+  <h5>Handling a Child's Report of Abuse</h5>
+  <ul>
+    <ol>Remain calm.</ol>
+    <ol><em>Believe</em> the child</ol>
+    <ol><em>Listen</em> to the child</ol>
+    <ol>Reassure the child the did nothing wrong</ol>
+    <ol>Make sure the child is safe.</ol>
+    <ol><strong>Get Help</strong></ol>
+  </ul>
+  <p>
+    To report child physical or sexual abuse in Illinois call: 
+    <strong>1-800-252-2873</strong>
+  </p>
+  <p>
+    Outside of Illinois call: <strong>1-800-422-4453</strong>
+  </p>
+</aside>
+
+<ul>
+  <% @donation_campaigns.each do |donation| %>
+    <li>
+      <%= "#{donation.title} - #{donation.amount} - #{donation.description}" %>
+    </li>
+  <% end %>
+</ul>
 

@@ -2,6 +2,9 @@ Owc2011::Application.routes.draw do
   devise_for :admin
 
   match 'admin' => "admin#index"
+  match 'about' => "main#about"
+  match 'services' => "main#services"
+
   namespace "admin" do
     resources :fundraisers
   end

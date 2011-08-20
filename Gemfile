@@ -14,6 +14,6 @@ group :development, :test do
   gem 'email_spec'
   gem 'pickle'
   gem 'rspec-rails'
-  gem 'ruby-debug19', require: 'ruby-debug'
+  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'shoulda-matchers'
 end
