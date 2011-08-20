@@ -61,7 +61,7 @@ describe Admin::FundraisersController do
       it "redirects to the fundraiser index page" do
         post :create, :fundraiser => valid_fundraiser_attributes
   
-        response.should redirect_to admin_new_tweet_path(:message => "Join us for #{fundraiser.name} on #{fundraiser.time.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope", :return_url => "admin/fundraiser")
+        response.should redirect_to admin_new_tweet_path(:message => "Join us for #{fundraiser.name} on #{fundraiser.time.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope")
       end
       
     end

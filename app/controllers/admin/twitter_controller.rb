@@ -1,6 +1,5 @@
 class Admin::TwitterController < ApplicationController
   def tweet
-    @return_url = params[:return_url]
     @message = params[:message]
   end
   
@@ -14,7 +13,8 @@ class Admin::TwitterController < ApplicationController
     
     Twitter.update("I'm tweeting with @gem!")
     
-    
-    redirect_to params[:return_url]
+    redirect_to admin_path
+  rescue => e
+    render "error"
   end
 end
