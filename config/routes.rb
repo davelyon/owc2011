@@ -38,7 +38,8 @@ Owc2011::Application.routes.draw do
   #       get 'recent', :on => :collection
   #     end
   #   end
-
+  resources :donations, :only => :index
+  
   # Sample resource route within a namespace:
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
