@@ -1,10 +1,7 @@
-class Admin::FundraisersController < ApplicationController
-  before_filter :authenticate_admin!
-
+class Admin::FundraisersController < AdminController
   def index
     @fundraisers = Fundraiser.all
   end
-
 
   def new
     @fundraiser = Fundraiser.new

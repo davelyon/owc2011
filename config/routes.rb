@@ -1,20 +1,21 @@
 Owc2011::Application.routes.draw do
-  devise_for :admin
+  devise_for :admin  
+  
+  match 'admin' => "admin#index", as: :admin_root
 
-  match 'admin' => "admin#index"
+  namespace "admin" do
+    resources :donation_campaigns
+    resources :events, except: :show
+    resources :fundraisers do
+      resources :tickets
+    end
+  end
+
   match 'about' => "main#about"
   match 'services' => "main#services"
   match 'testimonials' => "main#testimonials"
   match 'donate' => "main#donate"
   match 'store' => "main#store"
-
-  namespace "admin" do
-    resources :donation_campaigns
-    resources :fundraisers do
-      resources :tickets
-    end
-
-  end
 
   resources :donation_campaigns
 

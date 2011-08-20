@@ -1,0 +1,6 @@
+<ul>
+  <%= @events.each do |event| -%>
+    <li><%= event.name %></li>
+  <% end -%>
+</ul>
+<%= link_to 'create', new_admin_event_path %>

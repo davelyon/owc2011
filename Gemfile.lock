@@ -166,6 +166,7 @@ DEPENDENCIES
   devise
   email_spec
   heroku
+  launchy
   pg
   pickle
   rails (= 3.0.10)
