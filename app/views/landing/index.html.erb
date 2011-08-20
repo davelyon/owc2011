@@ -21,7 +21,7 @@
           <li><a href="#">Testimonials</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">Donate</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><%= link_to 'Contact Us', new_contact_request_path %></li>
         </ul>
       </header>
       <div role="main">
@@ -90,6 +90,7 @@
     </div>
   </body>
 </html>
-<% @donations.each do |donation| %>
+<% @donation_campaigns.each do |donation| %>
   <%= "#{donation.title} - #{donation.amount} - #{donation.description}" %>
 <% end %>
+

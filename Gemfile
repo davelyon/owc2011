@@ -1,16 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
-
-gem 'pg'
-gem 'sqlite3'
 gem 'devise'
-gem 'sqlite3'
+gem 'pg'
+gem 'rails', '3.0.10'
+gem 'sqlite3' # STOP HURTING ME WITH THIS
+
+gem 'heroku'
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'capybara'
-  gem 'pickle'
+  gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'pickle'
+  gem 'rspec-rails'
+  gem 'ruby-debug19', require: 'ruby-debug'
+  gem 'shoulda-matchers'
 end

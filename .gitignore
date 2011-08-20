@@ -3,6 +3,7 @@ db/*.sqlite3
 log/*.log
 tmp/
 # Rails
+config/database.yml
 .bundle
 db/*.sqlite3
 db/*.sqlite3-journal
