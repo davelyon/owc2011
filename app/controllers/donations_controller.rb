@@ -1,5 +1,5 @@
 class DonationsController < ApplicationController
-  before_filter :find_donation, :except => [:index, :new, :create]
+  before_filter :find_donation, :except => [:index, :new, :create, :successful]
 
   def index
     @donations = Donation.all
