@@ -41,7 +41,9 @@ describe Admin::FundraisersController do
   end
 
   context "POST create" do
-    let(:valid_fundraiser_attributes) { { "name" => "Ditkas fundraiser", "time" => Time.now, "location" => "my house" } }
+    let(:valid_fundraiser_attributes) do
+      { "name" => "Ditkas fundraiser", "start_at" => Time.now, "end_at" => Time.now + 1.hour, "location" => "my house" }
+    end
     let(:fundraiser) { Fundraiser.create!(valid_fundraiser_attributes) }
 
     context "with valid params" do
@@ -60,8 +62,7 @@ describe Admin::FundraisersController do
 
       it "redirects to the fundraiser index page" do
         post :create, :fundraiser => valid_fundraiser_attributes
-
-        response.should redirect_to admin_new_tweet_path(:message => "Join us for #{fundraiser.name} on #{fundraiser.time.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope")
+        response.should redirect_to admin_new_tweet_path(:message => "Join us for #{fundraiser.name} on #{fundraiser.start_at.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope")
       end
 
     end

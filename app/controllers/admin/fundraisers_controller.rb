@@ -13,7 +13,7 @@ class Admin::FundraisersController < AdminController
   def create
     @fundraiser = Fundraiser.new(params[:fundraiser])
     if @fundraiser.save
-      redirect_to admin_new_tweet_path(:message => "Join us for #{@fundraiser.name} on #{@fundraiser.time.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope"), :notice => "Fundraiser Added!"
+      redirect_to admin_new_tweet_path(:message => "Join us for #{@fundraiser.name} on #{@fundraiser.start_at.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope"), :notice => "Fundraiser Added!"
     else
       render :new
     end

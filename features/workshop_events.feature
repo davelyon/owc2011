@@ -27,7 +27,8 @@ Feature: Workshop events
 			| Name        | Good Touch, Bad Touch              |
 			| Location    | Caleb's pad                        |
 			| Description | A seminar on Good Touch, Bad Touch |
-		And I select "2011-08-20" as the "Start at" date and time
+		And I select "2011-08-20 14:00" as the "Start at" date and time
+		And I select "2011-08-20 16:00" as the "End at" date and time
 		When I press "Create"
 		And I go to the admin events page
 		Then I should see the following list:

@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'devise'
+gem 'event-calendar', :require => 'event_calendar'
 gem 'heroku'
 gem 'pg'
 gem 'rails', '3.0.10'

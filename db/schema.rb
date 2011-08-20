@@ -58,15 +58,17 @@ ActiveRecord::Schema.define(:version => 20110821003737) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "end_at"
   end
 
   create_table "fundraisers", :force => true do |t|
     t.string   "name"
-    t.datetime "time"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "location"
+    t.datetime "start_at"
+    t.datetime "end_at"
     t.text     "image"
   end
 

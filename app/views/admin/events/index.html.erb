@@ -1,10 +1,10 @@
 <ul>
-  <% @events.each do |event| -%>
+  <% @events.each do |event| %>
     <li>
       <span><%= link_to event.name, admin_event_path(event) %></span>
       <%= link_to 'edit', edit_admin_event_path(event) %>
       <%= link_to 'delete', [:admin, event], method: :delete %>
     </li>
-  <% end -%>
+  <% end %>
 </ul>
 <%= link_to 'create', new_admin_event_path %>

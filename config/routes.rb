@@ -3,13 +3,11 @@ Owc2011::Application.routes.draw do
 
   match 'admin' => "admin#index", as: :admin_root
 
-  match 'admin' => "admin#index"
   match 'about' => "main#about"
   match 'services' => "main#services"
   match 'testimonials' => "main#testimonials"
   match 'donate' => "main#donate"
   match 'store' => "main#store"
-
 
   namespace "admin" do
     resources :donation_campaigns
@@ -28,11 +26,6 @@ Owc2011::Application.routes.draw do
     end
   end
 
-  match 'about' => "main#about"
-  match 'services' => "main#services"
-  match 'testimonials' => "main#testimonials"
-  match 'store' => "main#store"
-
   resources :donation_campaigns
 
   resources :donations, :only => [:index] do
@@ -47,6 +40,8 @@ Owc2011::Application.routes.draw do
   resources :contact_requests, only: [:create, :new]
 
   resources :kids_corners, only: [:index, :show]
+  get '/events(/:year(/:month))' => 'events#index', as: :events, constraints: {year: /\d{4}/, month: /\d{1,2}/}
+  resources :events, :fundraisers, only: :show
 
   root :to => "landing#index"
 end
