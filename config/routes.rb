@@ -7,6 +7,7 @@ Owc2011::Application.routes.draw do
 
   namespace "admin" do
     resources :fundraisers
+    resources :donation_campaigns
   end
 
   resources :donation_campaigns

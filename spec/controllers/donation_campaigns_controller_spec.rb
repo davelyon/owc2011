@@ -1,7 +1,8 @@
 require 'spec_helper'
 
-describe DonationCampaignsController do
+describe Admin::DonationCampaignsController do
   before :each do
+    sign_in_admin_user
     @donation_campaign = DonationCampaign.create!(:title => "campaign")
   end
 
@@ -42,7 +43,7 @@ describe DonationCampaignsController do
 
     it "redirects to the show page for the donation_campaign" do
       post :create, :donation_campaign => {:title => "new title"}
-      response.should redirect_to assigns(:donation_campaign)
+      response.should redirect_to [:admin, assigns(:donation_campaign)]
     end
   end
 
@@ -55,7 +56,7 @@ describe DonationCampaignsController do
 
     it "redirects to the show page for the donation_campaign" do
       get :update, :id => @donation_campaign.id, :donation_campaign => {:title => "new title"}
-      response.should redirect_to @donation_campaign
+      response.should redirect_to [:admin, assigns(:donation_campaign)]
     end
   end
 
@@ -63,7 +64,7 @@ describe DonationCampaignsController do
     it "destroys the story" do
       delete :destroy, :id => @donation_campaign.id
       lambda { DonationCampaign.find(@donation_campaign.id) }.should raise_error ActiveRecord::RecordNotFound
-      response.should redirect_to donation_campaigns_path
+      response.should redirect_to [:admin, :donation_campaigns]
     end
   end
 end

@@ -7,7 +7,8 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-
+    when "the admin donation campaign page"
+      admin_donation_campaign_path(DonationCampaign.last)
     when /^the home\s?page$/
       '/'
 
