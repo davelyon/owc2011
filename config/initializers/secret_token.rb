@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Owc2011::Application.config.secret_token = 'e71f8efca2a5049265e6cde898821a4a55236c1ad4766ba91a8730476b093083183f84e13c70671a0b1eb1a1306a0bb1437887818b54b5256fd7a99c1327efba'
+Owc2011::Application.config.secret_token = 'a8a118b793de1a148c687b7efc5be6a98355b6b612bea7229628527be3016760070747c49311d5744a1d578553d3557cba65c6e5474b51eee0c07a751a8b517a'

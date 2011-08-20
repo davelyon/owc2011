@@ -2,10 +2,13 @@ development:
   adapter: postgresql
   database: owc2011_development
 
-test:
+test: &test
   adapter: postgresql
   database: owc2011_test
 
 production:
   adapter: postgresql
   database: owc2011_production
+
+cucumber:
+  <<: *test
