@@ -33,8 +33,8 @@
             <li><%= link_to 'Testimonials', testimonials_path %></li>
           </ul>
           <ul class="social-media">
-            <li class="facebook"><a href="#">Facebook</a></li>
-            <li class="twitter"><a href="#">Twitter</a></li>
+            <li class="facebook"><a href="http://www.facebook.com/pages/Kids-Have-Hope/169968913527">Facebook</a></li>
+            <li class="twitter"><a href="http://twitter.com/#!/kidshavehope">Twitter</a></li>
             <li class="subscribe"><a href="#">Subscribe</a></li>
           </ul>
         </nav>
@@ -45,16 +45,18 @@
     <div role="main">
       <%= yield %>
     </div>
-    <footer role="contentinfo">
+    <footer role="contentinfo" itemscope itemtype="http://schema.org/Organization">
       <ul>
-        <li>Kids Have Hope</li>
-        <li>Chicago, IL</li>
+        <li itemprop="name">Kids Have Hope</li>
+        <li itemscope itemtype="http://schema.org/Organization">
+          <span itemprop="addressLocality">Chicago</span>, 
+          <span itemprop="addressRegion">IL</span></li>
         <li>
-          <a href="mailto:melicurk@kidshavehope.org">
-            melicurk@kidshavehope.org
+          <a href="mailto:melicurk@kidshavehope.org"
+             itemprop="email">melicurk@kidshavehope.org
           </a>
         </li>
-        <li>1-888-806-8481</li>
+        <li itemprop="telephone">1-888-806-8481</li>
         <li>Copyright &copy; 2011 Kids Have Hope.&nbsp; <em>All rights reserved</em></li>
       </ul>
     </footer>
