@@ -29,10 +29,10 @@ Feature: Workshop events
 			| Description | A seminar on Good Touch, Bad Touch |
 		And I select "2011-08-20" as the "Start at" date and time
 		When I press "Create"
+		And I go to the admin events page
 		Then I should see the following list:
 			| Good Touch, Bad Touch |
-		And I should see "Event successfully created"
-
+			
 	Scenario: edit
 		Given an event exists with name: "Good Touch, Bad Touch"
     And I follow "workshop events"
