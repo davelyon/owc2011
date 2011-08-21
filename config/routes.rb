@@ -19,7 +19,7 @@ Owc2011::Application.routes.draw do
       resources :tickets
     end
 
-    resources :socials, except: [:edit, :update, :index, :show, :destroy]
+    resources :socials, only: [:new, :create], :path => "social"
   end
 
   resources :donation_campaigns
