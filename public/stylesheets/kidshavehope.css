@@ -237,7 +237,8 @@ section figure img {
   border: 1px solid rgb(180, 180, 180);
 }
 
-section *:last-child {
+section ul:last-child,
+section p:last-child {
   padding:0;
   margin-bottom:0;
 }
