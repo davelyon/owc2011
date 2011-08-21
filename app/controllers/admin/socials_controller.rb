@@ -10,6 +10,7 @@ class Admin::SocialsController < AdminController
 
     redirect_to admin_root_path
   rescue => e
+    logger.debug e
     render "error"
   end
 end
