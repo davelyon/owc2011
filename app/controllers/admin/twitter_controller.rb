@@ -14,7 +14,7 @@ class Admin::TwitterController < ApplicationController
     
     Twitter.update(params[:post_tweet][:twitter_post])
     
-    redirect_to admin_path
+    redirect_to admin_root_path
   rescue => e
     render "error"    
   end

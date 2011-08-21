@@ -15,7 +15,7 @@ describe Admin::TwitterController do
       
       post :post_tweet, :post_tweet => {:twitter_post => "I can has tweets!"}
       
-      response.should redirect_to(admin_path)
+      response.should redirect_to(admin_root_path)
     end
     
     it "tweets" do
