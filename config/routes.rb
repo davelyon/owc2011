@@ -18,15 +18,8 @@ Owc2011::Application.routes.draw do
     resources :fundraisers do
       resources :tickets
     end
-    resources :fundraisers do
-      resources :tickets
-    end
 
-    controller :twitter do
-      match 'tweet', :as => :new_tweet
-      get 'post_tweet', :to => :post_tweet, :as => :post_tweet
-      match '/:action'
-    end
+    resources :socials, except: [:edit, :update, :index, :show, :destroy]
   end
 
   resources :donation_campaigns
