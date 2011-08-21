@@ -1,6 +1,7 @@
-<h2>Kids Corner</h2>
-
-<%- @kids_corners.each do |corner| %>
-  <h2> <%= link_to corner.title, corner %> </h2>
-  <p> <%= simple_format corner.content %> </p>
-<%- end %>
+<section>
+  <h1>Kids Corner</h1>
+  <%- @kids_corners.each do |corner| %>
+    <h2><%= link_to corner.title, corner %></h2>
+    <p><%= simple_format corner.content %></p>
+  <%- end %>
+</section>

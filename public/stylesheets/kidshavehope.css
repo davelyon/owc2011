@@ -175,7 +175,8 @@ a {
   text-decoration: underline;
 }
 
-a:hover {
+a:visited, 
+a:hover { 
   color: rgb(3, 106, 180);
 }
 
@@ -254,7 +255,7 @@ aside {
   width: 22em;
 }
 
-aside p:last-of-type {
+aside p:last-child {
   padding:0;
 }
 
@@ -380,7 +381,7 @@ form.paypal {
 }
 
 div.donation-campaign form.paypal {
-  padding:0 0 2em 0;
+  padding:0 0 1.25em 0;
 }
 
 div.donation-campaign form.paypal:last-of-type {
@@ -429,6 +430,10 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
  background: rgb(3, 106, 180);
+}
+
+input[type="image"] {
+  margin:0;
 }
 
 input:not([type="submit"]):hover:not([type="image"]):hover,
