@@ -155,12 +155,12 @@ blockquote p:last-of-type {
   padding-bottom:0;
 }
 
-cite {
+section cite {
   color:rgb(149, 101, 168);
   display: block;
   font-family: georgia, serif;
   font-style: italic;
-  padding: 0.625em 0 0 0;
+  padding: 0.625em 5em 0 0 !important;
   text-align: right;
 }
 
