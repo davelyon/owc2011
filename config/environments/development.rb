@@ -17,17 +17,19 @@ Owc2011::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  
+
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
-  
+
   CONFIG[:twitter_consumer_key] = "X1sZlobxFUduIJwSwY4PA"
   CONFIG[:twitter_consumer_secret] = "DYGao1Zn6fWs3Qbq5wRmVERGywiYCeOvcrEnUoRVOQ"
   CONFIG[:twitter_oauth_token] = "358979030-DmCPzxsShBsgyVwst9YAmKWXNzXPbXxJWyCaJXXq"
   CONFIG[:twitter_oauth_token_secret] = "G6XsBbwmFvtDvWblKs6C1fP2qMmvqjq44SOsCSev4"
-  
+
+  CONFIG[:facebook_client_id] = '267176299960566'
+  CONFIG[:facebook_client_secret] = 'b365841b9c47e527efd909e212c5f553'
 end

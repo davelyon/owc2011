@@ -28,13 +28,6 @@ describe Admin::SocialsController do
     end
 
     it "tweets" do
-      configure = mock("Configurer")
-      configure.should_receive(:consumer_key=).with(CONFIG[:twitter_consumer_key])
-      configure.should_receive(:consumer_secret=).with(CONFIG[:twitter_consumer_secret])
-      configure.should_receive(:oauth_token=).with(CONFIG[:twitter_oauth_token])
-      configure.should_receive(:oauth_token_secret=).with(CONFIG[:twitter_oauth_token_secret])
-      Twitter.should_receive(:configure).once.and_yield(configure)
-
       Twitter.should_receive(:update).with("I can has tweets!")
 
       post :create, :post_tweet => {:twitter_post => "I can has tweets!"}
