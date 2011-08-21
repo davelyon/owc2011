@@ -12,9 +12,9 @@ Feature: Workshop events
 
   Scenario: look
     Given the following events exist:
-      | name                  |
-      | Workshop One          |
-      | Good Touch, Bad Touch |
+      | name                  | start_at   |
+      | Workshop One          | 2020/01/20 |
+      | Good Touch, Bad Touch | 2015/06/12 |
     When I follow "Workshop Events"
     Then I should see the following list:
       | Workshop One          |
@@ -35,7 +35,7 @@ Feature: Workshop events
 			| Good Touch, Bad Touch |
 			
 	Scenario: edit
-		Given an event exists with name: "Good Touch, Bad Touch"
+		Given an event exists with name: "Good Touch, Bad Touch", start_at: "2020/03/14"
     And I follow "Workshop Events"
 		And I follow "Edit" within the "Good Touch, Bad Touch" section
 		And I fill in "Name" with "herp derp"
@@ -45,7 +45,7 @@ Feature: Workshop events
 		And I should see "Event successfully updated"
 
 	Scenario: destroy
-		Given an event exists with name: "Good Touch, Bad Touch"
+		Given an event exists with name: "Good Touch, Bad Touch", start_at: "2020/03/14"
     And I follow "Workshop Events"
 		When I follow "Delete" within the "Good Touch, Bad Touch" section
 		Then I should be on the admin events page
