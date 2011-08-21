@@ -90,11 +90,11 @@ body {
   background: rgb(245,245,245) /* url(/images/background/grid.jpg) repeat-y center top*/;
   border: 1px solid rgb(255,255,255);
   border-radius:10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.35);
   color: rgb(50, 50, 50);
   font-family: helvetica, arial, sans-serif;
   font-size: 10px;
-  margin: 4em auto 0 auto;
+  margin: 4em auto;
   padding: 2em 3.2em;
   width:102.4em;
   text-shadow: 0 1px 0px rgb(255, 255, 255);
@@ -203,7 +203,7 @@ section figure {
 }
 
 section figure img {
-  border: 1px solid rgb(200, 200, 200);
+  border: 1px solid rgb(180, 180, 180);
 }
 
 aside {
@@ -234,6 +234,10 @@ ol {
   list-style-position: inside;
   list-style-type: circle;
   margin: 0 0 1.25em 0; 
+}
+
+ul.no-list-style {
+  list-style-type: none;
 }
 
 nav ul {  
@@ -295,7 +299,10 @@ nav ul.social-media li:last-of-type {
 nav ul:nth-child(3) {
   margin:0;
 }
-
+aside ul {
+  font-family: helvetica, arial, sans-serif;
+  font-style: normal;
+}
 footer ul { 
   font-family: helvetica, arial, sans-serif;
   font-size: 0.8125em;
