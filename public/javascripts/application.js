@@ -14,5 +14,5 @@ $(document).ready(function() {
     event.preventDefault();
     $('div.newsletter').dialog("open");
   });
-  update_character;
+  update_character();
 });

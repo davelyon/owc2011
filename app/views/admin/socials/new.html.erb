@@ -2,8 +2,8 @@
 
 
 <%= form_for :post_tweet, :url => admin_socials_path do |form| %>
-
-  <span id="twitter_character_coundown">140</span>  
+  
+  <span id="twitter_character_coundown"><%= 140 - @message.length%></span>  
   Characters left
   <br/> 
   
@@ -17,3 +17,5 @@
 <% end %>
 
 <%= link_to "Don't post the event", admin_root_path %>
+
+a
