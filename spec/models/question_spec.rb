@@ -4,6 +4,7 @@ describe Question do
   describe "validations" do
     it { should validate_presence_of :quiz_id }
     it { should validate_presence_of :title }
+    it { should validate_presence_of :reason }
   end
 
   describe "assocations" do

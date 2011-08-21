@@ -8,6 +8,7 @@ Feature: Admin adds questions to quizzes
 
   Scenario: happy path
     Given I fill in "Title" with "Walking the dog"
+    And I fill in "Reason" with "Walking the dog is safe as can be!"
     And I press "Create"
     Then I should see "Question successfully created."
     And I should see "Walking the dog"
@@ -15,4 +16,5 @@ Feature: Admin adds questions to quizzes
   Scenario: invalid fields
     When I press "Create"
     Then I should see "Title can't be blank"
+    And I should see "Reason can't be blank"
 
