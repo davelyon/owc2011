@@ -17,4 +17,3 @@ Feature: Admin adds questions to quizzes
     When I press "Create"
     Then I should see "Title can't be blank"
     And I should see "Reason can't be blank"
-
