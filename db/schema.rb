@@ -61,6 +61,16 @@ ActiveRecord::Schema.define(:version => 20110821003737) do
     t.datetime "end_at"
   end
 
+  create_table "facebook_accounts", :force => true do |t|
+    t.integer  "user_id"
+    t.boolean  "active",              :default => false
+    t.text     "stream_url"
+    t.text     "access_token"
+    t.text     "oauth_authorize_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "fundraisers", :force => true do |t|
     t.string   "name"
     t.text     "description"
