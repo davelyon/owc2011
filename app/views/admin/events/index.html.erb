@@ -1,7 +1,7 @@
 <ul>
   <% @events.each do |event| %>
     <li>
-      <span><%= link_to "#{event.name} @ #{event.start_at.strftime('%M/%d/%Y@%H:%M')}", admin_event_path(event) %></span>
+      <span><%= link_to event.name, admin_event_path(event) %></span>
       <%= link_to 'edit', edit_admin_event_path(event) %>
       <%= link_to 'delete', [:admin, event], method: :delete %>
     </li>
