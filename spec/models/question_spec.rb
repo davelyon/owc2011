@@ -8,5 +8,6 @@ describe Question do
 
   describe "assocations" do
     it { should belong_to :quiz }
+    it { should have_many :answers }
   end
 end

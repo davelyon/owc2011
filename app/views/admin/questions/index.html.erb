@@ -2,6 +2,7 @@
   <% @questions.each do |question| %>
     <li>
       <span><%= question.title %></span>
+      <%= link_to 'answers', admin_quiz_question_answers_path(@quiz, question) %>
     </li>
   <% end %>
 </ul>

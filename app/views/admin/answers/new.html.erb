@@ -1,0 +1,13 @@
+<%= render 'shared/form_errors', object: @answer %>
+
+<%= form_for [:admin, :quiz, :question, @answer] do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :correct %>
+  <%= form.check_box :correct %>
+
+  <%= form.hidden_field :question_id %>
+
+  <%= form.submit %>
+<% end %>

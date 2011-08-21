@@ -9,6 +9,8 @@ module NavigationHelpers
     case page_name
     when "the admin donation campaign page"
       admin_donation_campaign_path(DonationCampaign.last)
+    when /^the admin quiz questions page for "([^"]*)"$/
+      admin_quiz_questions_path(Quiz.find_by_title($1))
     when /^the home\s?page$/
       '/'
 
