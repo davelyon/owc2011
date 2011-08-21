@@ -15,8 +15,8 @@
 
 /* Outer most container */
 .ec-calendar {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 11px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
   line-height: 14px;
   margin: 0;
   padding: 0;
@@ -31,12 +31,14 @@
 }
 
 .ec-month-name {
-  font-size: 16px;
+	color: rgba(3, 106, 180,0.75);
+  font-size: 1.6em;
   font-weight: bold;
+	padding: 0 0 1em 0;
 }
 
 .ec-month-nav {
-
+	color: rgb(80, 80, 80);
 }
 
 /* Containers */
@@ -54,7 +56,7 @@
   width: 100%;
   table-layout: fixed;
   padding: 2px 0;
-  background: #303030;
+  background: rgba(3, 106, 180,0.75);
   color: white;
 }
 
@@ -95,7 +97,7 @@
 }
 
 .ec-today-bg {
-  background-color: #ffffdd;
+  background-color: rgb(255, 255, 255);
 }
 
 .ec-row-table {
@@ -106,14 +108,13 @@
 
 /* Day header */
 .ec-day-header {
-  color: #444;
+  color: rgb(80, 80, 80);
   text-align: right;
   padding: 0 5px;
   line-height: 16px;
   border-top: 1px solid #d5d5d5;
   border-left: 1px solid #d5d5d5;
-  border-bottom: 1px dotted #bbbbbb;
-  background-color: #ecede2;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -122,7 +123,7 @@ a.ec-day-link {
 }
 
 .ec-today-header {
-  background-color: #d7d7ba;
+  background-color: rgba(218, 202, 224, 0.4);
 }
 
 .ec-weekend-day-header {
@@ -130,7 +131,7 @@ a.ec-day-link {
 }
 
 .ec-other-month-header {
-  background-color: #efefef;
+  background-color: #fff;
   color: #777;
 }
 
