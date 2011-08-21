@@ -88,10 +88,3 @@
     <li><strong><a href="#" class='newsletter'>Subscribe to our Newsletter</a></strong></li>
   </ul>
 </aside>
-<div class="newsletter">
-  <% form_tag newsletter_subscriptions_path, method: :post do %>
-    <%= label_tag :email, "Enter your e-mail address" %>
-    <%= text_field_tag :email %>
-    <%= submit_tag 'Subscribe' %>
-  <% end -%>
-</div>
