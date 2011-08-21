@@ -1,1 +1,12 @@
 <%= render 'shared/event', event: @fundraiser %>
+
+<ul>
+  <% @fundraiser.tickets.each do |ticket| -%>
+    <li>
+      <h2><%= ticket.title %></h2>
+      <p><%= ticket.description %></p>
+      <span><%= number_to_currency ticket.amount %></span>
+      <%= paypal_button amount: ticket.amount, name: ticket.title %>
+    </li>
+  <% end -%>
+</ul>
