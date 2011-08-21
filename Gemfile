@@ -7,7 +7,8 @@ gem 'pg'
 gem 'rails', '3.0.10'
 gem 'sqlite3' # STOP HURTING ME WITH THIS
 gem 'twitter'
-gem 'heroku'
+gem 'rest-client'
+gem 'json'
 
 group :development, :test do
   gem 'capybara'

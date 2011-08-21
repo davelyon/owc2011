@@ -186,10 +186,12 @@ DEPENDENCIES
   email_spec
   event-calendar
   heroku
+  json
   launchy
   pg
   pickle
   rails (= 3.0.10)
+  rest-client
   rspec-rails
   ruby-debug19
   shoulda-matchers
