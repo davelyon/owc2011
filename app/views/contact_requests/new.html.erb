@@ -39,16 +39,19 @@
   <% end %>
 </section>
 
-<aside>
+<aside itemscope itemtype="http://schema.org/Organization">
   <h3>Get in touch!</h3>
   <ul class="no-list-style">
     <li><strong>Contact us by phone:</strong></li>
-    <li>888-806-8481</li>
+    <li itemprop="telephone">888-806-8481</li>
   </ul>
-  <ul class="no-list-style">
+  <ul class="no-list-style" itemscope itemtype="http://schema.org/PostalAddress">
     <li><strong>Contact us by mail:</strong></li>
-    <li>Kids Have Hope</li>
-    <li>P.O. Box 221066</li>
-    <li>Chicago, IL 60622</li>
+    <li itemprop="name">Kids Have Hope</li>
+    <li itemprop="postOfficeBoxNumber">P.O. Box 221066</li>
+    <li itemprop="addressLocality">Chicago</span>, 
+      <span itemprop="addressRegion">IL</span> 
+      <span itemprop="postalCode">60622</span>
+    </li>
   </ul>
 </aside>
