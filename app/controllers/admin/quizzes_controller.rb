@@ -16,4 +16,18 @@ class Admin::QuizzesController < AdminController
       render :new
     end
   end
+
+  def edit
+    @quiz = Quiz.find params[:id]
+  end
+
+  def update
+    @quiz = Quiz.find params[:id]
+
+    if @quiz.update_attributes params[:quiz]
+      redirect_to admin_quizzes_path, :notice => "Quiz successfully updated."
+    else
+      render :new
+    end
+  end
 end

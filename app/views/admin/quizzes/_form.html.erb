@@ -1,0 +1,14 @@
+<%= render 'shared/form_errors', object: quiz %>
+
+<%= form_for [:admin, quiz] do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :explanation %>
+  <%= form.text_area :explanation %>
+
+  <%= form.label :active %>
+  <%= form.check_box :active %>
+
+  <%= form.submit %>
+<% end %>

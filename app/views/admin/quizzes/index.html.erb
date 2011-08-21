@@ -2,6 +2,7 @@
   <% @quizzes.each do |quiz| %>
     <li>
       <span><%= quiz.title %></span>
+      <%= link_to 'edit', edit_admin_quiz_path(quiz) %>
       <%= link_to 'questions', admin_quiz_questions_path(quiz) %>
     </li>
   <% end %>
