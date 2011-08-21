@@ -89,7 +89,7 @@ html {
 }
 
 body {
-  /*background: rgb(245,245,245) /*url(/images/background/grid.jpg) repeat-y center top*/
+/*  background: rgb(245,245,245) url(/images/background/grid.jpg) repeat-y center top;*/
   background: rgb(245,245,245) url(/images/background/bg-graphic.png) no-repeat right top;
   border: 1px solid rgb(255,255,255);
   border-radius:10px;
@@ -251,7 +251,7 @@ aside {
   float: left;
   font-size: 0.8125em;
   padding: 1.2308em;
-  width: 22.0384em;
+  width: 22em;
 }
 
 aside p:last-of-type {
