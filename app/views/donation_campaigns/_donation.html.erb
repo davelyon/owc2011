@@ -1,9 +1,13 @@
-<ul>
-  <% @donation_campaigns.each do |donation| %> 
-    <li>
-      <%= donation.title %> for $<%= donation.amount%> | <%= paypal_button({:amount => donation.amount, :name => donation.title}) %>
-      <br />
-      <%= donation.description%>
-    </li>
-  <%end%>
-</ul>
+<div>
+
+    <% @donation_campaigns.each do |donation| %> 
+      <p>
+        <%= donation.title %> <em>for</em> <strong>$<%= donation.amount%></strong>
+      </p>
+      <p>
+        <%= donation.description%>
+      </p>
+        <%= paypal_button({:amount => donation.amount, :name => donation.title}) %>
+    <%end%>
+  
+</div>
