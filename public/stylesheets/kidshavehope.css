@@ -377,7 +377,7 @@ select {
   outline: none;
 }
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="image"]),
 textarea,
 select { 
   border:1px solid rgba(100, 100, 100, 0.75);
@@ -403,7 +403,7 @@ input[type="submit"]:hover {
  background: rgb(3, 106, 180);
 }
 
-input:not([type="submit"]):hover,
+input:not([type="submit"]):hover:not([type="image"]):hover,
 textarea:hover { 
   border:1px solid rgb(100, 100, 100);
 } 
