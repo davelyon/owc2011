@@ -3,6 +3,11 @@
 
 <%= form_for :post_tweet, :url => admin_post_tweet_path do |form| %>
   <%= form.label :twitter_post%>
+  <span id="twitter_character_coundown">
+    <%= 140 - @message.size%>
+  </span>  
+  Characters left
+  <br/>
   <%= form.text_field :twitter_post, {:value => @message, :size => 140}%>
   <%= form.submit  "Post tweet"%>
 <% end %>
