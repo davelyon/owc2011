@@ -356,6 +356,42 @@ nav ul:nth-child(3) {
   margin:0;
 }
 
+ul.event {
+	font-family: helvetica, arial, sans-serif;
+  font-style: normal;
+}
+
+ul.event li h3 {
+	display: inline;
+}
+
+ul.event li {
+	list-style: none;
+}
+
+ul.event li span {
+	padding: 20px;
+}
+
+ul.fundraiser_ticket li {
+	font-family: helvetica, arial, sans-serif;
+  font-style: normal;
+	list-style: none;
+}
+
+section.fundraiser_tickets {
+	margin-top: 3em;
+}
+
+ul.fundraiser_ticket li form.paypal {
+	display: inline;
+  padding: 0.55em 0;
+}
+
+ul.fundraiser_ticket li form.paypal input {
+  padding: 0.55em 0;
+}
+
 aside ul {
   font-family: helvetica, arial, sans-serif;
   font-style: normal;

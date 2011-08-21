@@ -1,11 +1,9 @@
-<h1><%= event.name %></h1>
-<dl>
-  <dt>Starts:</dt>
-  <dd><%= event.start_at.strftime('%m/%d/%Y@ %H:%M %p') %></dd>
-  <dt>End:</dt>
-  <dd><%= event.end_at.strftime('%m/%d/%Y@ %H:%M %p') %></dd>
-  <dt>Location:</dt>
-  <dd><%= event.location %></dd>
-  <dt>Description:</dt>
-  <dd><%= event.description %></dd>
-</dl>
+<section>
+  <h1><%= event.name %></h1>
+  <ul class="event">
+    <li><h3>Starts:</h3><span><%= event.start_at.strftime('%m/%d/%Y@ %H:%M %p') %></span></li>
+    <li><h3>End:</h3><span><%= event.end_at.strftime('%m/%d/%Y@ %H:%M %p') %></span></li>
+    <li><h3>Location:</h3><span><%= event.location %></span></li>
+    <li><h3>Description:</h3><span><%= event.description %></span></li>
+  </ul>
+</section>

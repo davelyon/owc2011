@@ -1,13 +1,14 @@
 <%= render 'shared/event', event: @fundraiser %>
 
-<ul>
+<section class="fundraiser_tickets">
+  <h2>Available Tickets</h2>
+
   <% @fundraiser.tickets.each do |ticket| -%>
-    <li>
-      <h2><%= ticket.title %></h2>
-      <p><%= ticket.description %></p>
-      <span><%= number_to_currency ticket.amount %></span>
-      <span><%= pluralize ticket.quantity, 'ticket' %> left<span>
-      <%= paypal_button :amount => ticket.amount, :name => ticket.title, :ticket_id => ticket.id %>
-    </li>
+    <ul class="fundraiser_ticket">
+      <li><h3><%= ticket.title %></h3></li>
+      <li><%= ticket.description %></li>
+      <li><%= number_to_currency ticket.amount %></li>
+      <li><%= paypal_button :amount => ticket.amount, :name => ticket.title, :ticket_id => ticket.id %><%= pluralize ticket.quantity, 'ticket' %> left</li>
+    </ul>
   <% end -%>
-</ul>
+</section>
