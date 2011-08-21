@@ -38,6 +38,7 @@ Owc2011::Application.routes.draw do
   resources :kids_corners, only: [:index, :show]
   get '/events(/:year(/:month))' => 'events#index', as: :events, constraints: {year: /\d{4}/, month: /\d{1,2}/}
   resources :events, :fundraisers, only: :show
+  resources :newsletter_subscriptions, only: :create
 
   root :to => "landing#index"
 end

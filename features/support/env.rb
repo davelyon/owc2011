@@ -50,3 +50,12 @@ end
 #     DatabaseCleaner.strategy = :transaction
 #   end
 #
+Before '@happy-tparty' do
+  def NewsletterSubscription.post *args
+    Object.new.tap do |response|
+      def response.code
+        201
+      end
+    end
+  end
+end

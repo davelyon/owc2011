@@ -87,7 +87,7 @@ html {
 }
 
 body {
-  background: rgb(245,245,245) /* url(/images/background/grid.jpg) repeat-y center top*/;
+  background: rgb(245,245,245) url(/images/background/grid.jpg) repeat-y center top;
   border: 1px solid rgb(255,255,255);
   border-radius:10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.35);
@@ -130,6 +130,11 @@ h2 {
 h3 {
   color: rgb(109, 37, 146);
   font-size: 1.3125em;
+  line-height: 1.9048em;
+}
+
+h4 {
+	font-size: 1.125em;
   line-height: 1.9048em;
 }
 
@@ -226,6 +231,16 @@ footer {
 /* =L I S T S
 __________________________________________________________ */
 
+ul.services {
+	font-family: helvetica, arial, sans-serif;
+	font-style: normal;
+	padding: 1.25em 0 0 0;
+}
+
+ul.services li {
+	list-style: none;
+	padding: 0em 0 1.25em 0;
+}
 
 ul,
 ol {
@@ -310,4 +325,3 @@ footer ul {
   list-style-type: none;
   margin: 0;
 }
-

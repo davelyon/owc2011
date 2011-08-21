@@ -85,4 +85,10 @@
     <li>Child Abuse Hotline: 1-800-4-A-CHILD.</li>
   </ul>
 </aside>
-
+<aside>
+  <% form_tag newsletter_subscriptions_path, method: :post do %>
+    <%= label_tag :email, "Subscribe to our newsletter!" %>
+    <%= text_field_tag :email %>
+    <%= submit_tag 'Subscribe' %>
+  <% end -%>
+</aside>
