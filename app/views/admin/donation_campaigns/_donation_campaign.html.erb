@@ -1,0 +1,6 @@
+<br />
+<strong> 
+  <%= link_to donation_campaign.title, admin_donation_campaign_path(donation_campaign) %> 
+  <%= link_to 'edit', edit_admin_donation_campaign_path(donation_campaign)%>
+  <%= link_to 'delete', [:admin, donation_campaign], method: :delete %>
+</strong>
