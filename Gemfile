@@ -9,6 +9,7 @@ gem 'sqlite3' # STOP HURTING ME WITH THIS
 gem 'twitter'
 gem 'rest-client'
 gem 'json'
+gem 'escape_utils'
 
 group :development, :test do
   gem 'capybara'
