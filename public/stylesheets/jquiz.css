@@ -1,93 +1,104 @@
 #jquiz p, #jquiz ul, #jquiz ol, #jquiz  {
-	margin:0;
-	padding:0;
-	color: #000;
+  margin:0;
+  padding:0;
+  color: #000;
 }
 #jquiz {
-	width:600px;
+  width:800px;
 }
-	#jquiz ul {
-		list-style-type:none;
-		margin:0;
-		padding:0;
-	}
-	#jquiz ol {
-		list-style-type: decimal;
-	}
-		#jquiz li p {
-			font-weight:bold;
-		}
-	#jquiz > li {
-		padding-bottom:10px;
-	}
-		.unanswered, .answered {
-			margin: 10px 0 0 0;
-			padding:0;
-		}
-			#jquiz li ul li {
-				cursor:pointer;
-				padding: 2px 0 2px 25px;
-				height:18px;
-				background-color: #FFF;
-			}
-				#jquiz li ul li:hover , .incorrect:focus, .correct:focus {
-					background-color: #EEE;
-					cursor:pointer;
-					padding: 2px 0 2px 25px;
-					height:18px;
-				}
-	#jquiz strong {
-		font-weight:bold;
-	}
+  #jquiz ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    
+  }
+  #jquiz ol {
+    list-style-type: decimal;
+  }
+    #jquiz li p {
+      font-weight:bold;
+      
+    }
+  #jquiz > li {
+  padding-top:50px;
+  padding-bottom:10px;
+ 
+  }
+    .unanswered, .answered {
+      margin: 10px 0 0 0;
+      padding:0;
+    }
+      #jquiz li ul li {
+        cursor:pointer;
+        padding: 2px 0 2px 25px;
+        height:18px;
+        background-color: #FFF;
+               
+      }
+        #jquiz li ul li:hover , .incorrect:focus, .correct:focus {
+          background-color: #EEE;
+          cursor:pointer;
+          padding: 2px 0 2px 25px;
+          height:18px;
+        }
+  #jquiz strong {
+    font-weight:bold;
+  }
 
 .wronganswer {
-	text-decoration:line-through;
+  text-decoration:line-through;
 }
 .correctanswer {
-	color:#0F0;
+  color:#0F0;
 }
 .realanswer {
-	color:#F00;
+  color:#F00;
 }
 .hidden {
-	display:none;
+  display:none;
 }
 .explanation {
 
 }
-	.explanation p {
-	
-	}
-		.explanation p:first-child {
-			
-		}
+  .explanation p {
+  
+  }
+    .explanation p:first-child {
+      
+    }
 .rightbox, .wrongbox {
-	padding:15px !important;
-	margin-top: 10px !important;
+  padding:15px !important;
+  margin-top: 10px !important;
+  border-radius:10px;
 }
 .rightbox {
-	background-color: #CFC;
-	border: 3px solid #52FF52;
+  background-color: #CFC;
+  border: 3px solid #52FF52;
+  border-radius:10px;
 }
-	.rightbox a {
-		color: #808066;
-	}
+  .rightbox a {
+    color: #808066;
+    border-radius:10px;
+  }
 .wrongbox {
-	background-color:#F0B0A9;
-	border: 3px solid #A20000;
+  background-color:#F0B0A9;
+  border: 3px solid #A20000;
+  border-radius:10px;
 }
-	.wrongbox a {
-		color: #825C58;
-	}
+  .wrongbox a {
+    color: #825C58;
+  }
 #jquizremarks {
-	display:none;
+  display:none;
 }
 #jquiztotal {
-	font-weight:bold;
-	font-size: 18px ;
-	padding: 10px;
-	border: 1px solid #000;
-	text-align:center;
-	margin: 15px 0 10px 0;
+  font-weight:bold;
+  font-size: 18px ;
+  padding: 10px;
+  border: 1px solid #000;
+  text-align:center;
+  margin: 15px 0 10px 0;
+  border-radius:10px;
+  
 }
 
