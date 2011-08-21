@@ -9,7 +9,7 @@ function update_character() {
 $(document).ready(function() {
   $(".datepicker").datepicker({dateFormat: 'yy-mm-dd'});
   $(".timepicker").AnyTime_picker();
-  $('div.newsletter').dialog({autoOpen: false, width: 330, height: 135});
+  $('div.newsletter').dialog({autoOpen: false, width: 320, height: 180, dialogClass: 'newsletter-wrapper', modal: true});
   $('a.newsletter').live('click', function(event) {
     event.preventDefault();
     $('div.newsletter').dialog("open");

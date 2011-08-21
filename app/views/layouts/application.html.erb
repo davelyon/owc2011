@@ -30,7 +30,7 @@
           <ul>
             <li><%= link_to 'Contact Us', new_contact_request_path %></li>
             <li><%= link_to 'Testimonials', testimonials_path %></li>
-            <li><a href="#" class='newsletter'>Subscribe</a></li>
+            <li><a href="#" class='newsletter'>Newsletter</a></li>
           </ul>
           <ul class="social-media">
             <li class="facebook"><a href="http://www.facebook.com/pages/Kids-Have-Hope/169968913527">Facebook</a></li>
@@ -65,8 +65,8 @@
   </div>
 <div class="newsletter">
   <%= form_tag newsletter_subscriptions_path, method: :post do %>
-    <%= label_tag :email, "Enter your e-mail address" %>
-    <%= text_field_tag :email %>
+    <%= label_tag :email, "Subscribe to our newsletter:" %>
+    <%= text_field_tag :email, nil, :placeholder => "Enter your email address" %>
     <%= submit_tag 'Subscribe' %>
   <% end -%>
 </div>

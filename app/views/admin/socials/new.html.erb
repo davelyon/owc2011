@@ -1,21 +1,23 @@
-<h1> Would you like to post this event to social networks?</h1>
+<section>
+  <h1> Would you like to post this event to social networks?</h1>
+  <%= form_for :post_tweet, :url => admin_socials_path do |form| %>
+    <div>
+      <%= form.label :twitter_post %>
+      <%= form.text_field :twitter_post, {:value => @message, :size => 140} %>
+      <span id="twitter_character_coundown" style="position:relative; top:-8px;">140</span> 
+    </div>
+    <div>
+      <%= form.label :facebook_post %>
+      <%= form.text_area :facebook_post, {:value => @message} %>
+    </div>
+    <%= form.submit  "Post!" %>
+  <% end %>
 
-
-<%= form_for :post_tweet, :url => admin_socials_path do |form| %>
-  
-  <span id="twitter_character_coundown"><%= 140 - @message.length%></span>  
-  Characters left
-  <br/> 
-  
-  <%= form.label :twitter_post %>
-  <%= form.text_field :twitter_post, {:value => @message, :size => 140} %>
-
-  <%= form.label :facebook_post %>
-  <%= form.text_area :facebook_post, {:value => @message} %>
-
-  <%= form.submit  "Post!" %>
-<% end %>
-
-<%= link_to "Don't post the event", admin_root_path %>
-
-a
+  <%= link_to "Don't post the event", admin_root_path %>
+</section>
+<aside>
+  <ul class="no-list-style">
+    <li><%= link_to 'New Donation Campaign', new_admin_donation_campaign_path %></li>
+    <li><%= link_to 'Admin Home', admin_root_path %></li>
+  </ul>
+</aside>
