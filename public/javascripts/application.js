@@ -8,6 +8,7 @@ function update_character() {
 
 $(document).ready(function() {
   $(".datepicker").datepicker({dateFormat: 'yy-mm-dd'});
+  $(".timepicker").AnyTime_picker();
   $('div.newsletter').dialog({autoOpen: false, width: 330, height: 135});
   $('a.newsletter').live('click', function(event) {
     event.preventDefault();
