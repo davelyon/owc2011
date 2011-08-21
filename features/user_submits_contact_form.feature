@@ -29,7 +29,6 @@ Feature: User submits contact form
     And I should see "Chicago, IL 60622"
 
   Scenario: happy path
-    Then show me the page
     Given I select "General question" from "Contact Type"
     And I fill in "My inquiry" for "Message"
     And I fill in "John Doe" for "Name"

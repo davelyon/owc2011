@@ -11,6 +11,5 @@ Feature: event tickets
       | Singletary - Individual Ticket                 | 15     |
     When I am on the events page
     And I follow "Dinner with 'Da Coach' Mike Ditka"
-    Then show me the page
     Then I should see "Iron Mike Corporate Sponsorship - Table for 10"
     And I should see "Singletary - Individual Ticket"

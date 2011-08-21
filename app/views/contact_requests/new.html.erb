@@ -6,7 +6,7 @@
     interested in having a <a href="http://kidshavehope.org/about_us">
       Licensed Social Worker</a> visit your school. 
   </p>
-  <%= render 'form_errors', object: @contact_request %>
+  <%= render 'shared/form_errors', object: @contact_request %>
   <%= form_for @contact_request do |f| %>
     <div>
       <%= f.label :contact_type, "Contact Type:" %>
@@ -35,20 +35,20 @@
         <%= f.label :phone, "Phone number" %>
         <%= f.phone_field :phone %>
       </div>
-      <%= f.submit "Submit" %>
-    <% end %>
-  </section>
+    <%= f.submit "Submit" %>
+  <% end %>
+</section>
 
-  <aside>
-    <h3>Get in touch!</h3>
-    <ul class="no-list-style">
-      <li><strong>Contact us by phone:</strong></li>
-      <li>888-806-8481</li>
-    </ul>
-    <ul class="no-list-style">
-      <li><strong>Contact us by mail:</strong></li>
-      <li>Kids Have Hope</li>
-      <li>P.O. Box 221066</li>
-      <li>Chicago, IL 60622</li>
-    </ul>
-  </aside>
+<aside>
+  <h3>Get in touch!</h3>
+  <ul class="no-list-style">
+    <li><strong>Contact us by phone:</strong></li>
+    <li>888-806-8481</li>
+  </ul>
+  <ul class="no-list-style">
+    <li><strong>Contact us by mail:</strong></li>
+    <li>Kids Have Hope</li>
+    <li>P.O. Box 221066</li>
+    <li>Chicago, IL 60622</li>
+  </ul>
+</aside>

@@ -1,0 +1,6 @@
+<ul>
+  <% @quizzes.each do |quiz| %>
+    <li><%= quiz.title %></li>
+  <% end %>
+</ul>
+<%= link_to 'New Quiz', new_admin_quiz_path %>
