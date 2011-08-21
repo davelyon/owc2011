@@ -61,7 +61,7 @@ describe Admin::EventsController do
       it "redirects to the event index page" do
         post :create, :event => valid_event_attributes
   
-        response.should redirect_to new_admin_social_path(:message => "Join us for #{event.name} on #{event.start_at.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope")
+        response.should redirect_to new_admin_social_path(:message => "Join us for #{event.name} on #{event.start_at.strftime('%m/%d/%Y@%H:%M')} #KidsHaveHope")
       end
       
     end
@@ -84,7 +84,7 @@ describe Admin::EventsController do
   end
   
   context "GET edit" do
-    let(:event) { Event.create!(:name => "Rolex") }
+    let(:event) { Event.create!(:name => "Rolex", :start_at => Time.now) }
   
     it "assigns @event" do
       get :edit, "id" => event.id.to_s
@@ -94,7 +94,7 @@ describe Admin::EventsController do
   end
   
   context "PUT update" do
-    let(:event) { Event.create!(:name => "Rolex") }
+    let(:event) { Event.create!(:name => "Rolex", :start_at => Time.now) }
   
     context "with valid params" do
       it "updates a event" do
@@ -113,7 +113,7 @@ describe Admin::EventsController do
   end
   
   context "DELETE destroy" do
-    let(:event) { Event.create!(:name => "Rolex") }
+    let(:event) { Event.create!(:name => "Rolex", :start_at => Time.now) }
   
     it "destroys a event and redirects to index" do
       id = event.id
@@ -125,7 +125,7 @@ describe Admin::EventsController do
   end
   
   context "show" do
-    let(:event) { Event.create!(:name => "Name") }
+    let(:event) { Event.create!(:name => "Name", :start_at => Time.now) }
     it "loads the event" do
       
       get :show, :id => event.id

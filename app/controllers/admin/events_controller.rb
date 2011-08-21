@@ -12,7 +12,7 @@ class Admin::EventsController < AdminController
   def create
     @event = Event.new params[:event]
     if @event.save
-      redirect_to new_admin_social_path(:message => "Join us for #{@event.name} on #{@event.start_at.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope"), :notice => "Event Added!"
+      redirect_to new_admin_social_path(:message => "Join us for #{@event.name} on #{@event.start_at.strftime('%m/%d/%Y@%H:%M')} #KidsHaveHope"), :notice => "Event Added!"
     else
       render :new
     end    

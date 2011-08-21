@@ -1,0 +1,8 @@
+<ul>
+  <% @answers.each do |answer| %>
+    <li>
+      <span><%= answer.title %></span>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'New Answer', new_admin_quiz_question_answer_path(@answer) %>
