@@ -1,4 +1,4 @@
 <%- @kids_corners.each do |corner| %>
   <h2> <%= link_to corner.title, corner %> </h2>
-  <p> <%= corner.content %> </p>
+  <p> <%= simple_format corner.content %> </p>
 <%- end %>
