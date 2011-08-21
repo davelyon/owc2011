@@ -1,8 +1,11 @@
+<h1>Quiz: <%= @quiz.title %></h1>
 <ul>
   <% @questions.each do |question| %>
     <li>
       <span><%= question.title %></span>
       <%= link_to 'answers', admin_quiz_question_answers_path(@quiz, question) %>
+      <%= link_to 'Edit', [:edit, :admin, @quiz, question] %>
+      <%= link_to 'Delete', [:admin, @quiz, question], method: :delete %>
     </li>
   <% end %>
 </ul>

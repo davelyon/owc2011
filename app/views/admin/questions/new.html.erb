@@ -1,13 +1,3 @@
-<%= render 'shared/form_errors', object: @question %>
-
-<%= form_for [:admin, :quiz, @question] do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-
-  <%= form.label :reason %>
-  <%= form.text_area :reason %>
-
-  <%= form.hidden_field :quiz_id %>
-
-  <%= form.submit %>
-<% end %>
+<h1>Quiz: <%= @quiz.title %></h1>
+<h2>New Question:</h2>
+<%= render 'admin/questions/form' %>

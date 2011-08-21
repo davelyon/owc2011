@@ -1,0 +1,4 @@
+<h1>Quiz: <%= @quiz.title %></h1>
+<h2>Question: <%= @question.title %></h2>
+<%= render 'shared/form_errors', object: @question %>
+<%= render 'admin/questions/form' %>
