@@ -1,10 +1,10 @@
-<div>
+<section>
   <h1>PayPal Donations</h1>
-  <p>
+  <h2>
     Every dollar counts in the fight to prevent child abuse. To make a 
     donation of your choice, please click on the button below. Thank 
     you!
-  </p>
+  </h2>
   <p>$15 towards materials for classrooms</p> 
   <p>
     Kids Have Hope uses many different materials in the classroom to 
@@ -13,28 +13,28 @@
     donation goes a long way towards preventing child abuse.  Thank you!
   </p>  
   <%= paypal_button %>
-</div>
-<div>
-  <h1>Donation Campaigns</h1>
-  <%= render :partial => "donation_campaigns/donation"%>
-
-  <h1>Mail in Donations</h1>
+  <h3>Donation Campaigns</h3>
   <p>
-    If you would like to make a charitable donation, please make the 
-    check out to Kids Have Hope and send it to:
-  </p>
-  <ul>
-    <li>Kids Have Hope</li>
-    <li>P.O. Box 221066</li>
-    <li>Chicago, IL 60622</li>
-  </ul>
-</div>
-<div>
-  <h3>Volunteer</h3>
-  <p>
-    We're constantly looking for volunteers, for more information, 
-    please contact Melissa Curk at: <a 
-    href="mailto:melicurk@kidshavehope.org">melicurk@kidshavehope.org</a> 
-    or 1-888-806-8481.
-  </p>
-</div>
+    <%= render :partial => "donation_campaigns/donation", 
+      :collection => @donation_campaigns %>
+    </p>
+    <h3>Mail in Donations</h3>
+    <p>
+      If you would like to make a charitable donation, please make the 
+      check out to Kids Have Hope and send it to:
+    </p>
+    <ul class="no-list-style">
+      <li>Kids Have Hope</li>
+      <li>P.O. Box 221066</li>
+      <li>Chicago, IL 60622</li>
+    </ul>
+  </section>
+  <aside>
+    <h3>Volunteer</h3>
+    <p>
+      We're constantly looking for volunteers, for more information, 
+      please contact Melissa Curk at: <a 
+        href="mailto:melicurk@kidshavehope.org">melicurk@kidshavehope.org</a> 
+      or 1-888-806-8481.
+    </p>
+  </aside>
