@@ -1,0 +1,35 @@
+<%= content_for(:head) do %>
+  <%= javascript_include_tag 'jquiz' %>
+  <%= stylesheet_link_tag 'jquiz' %>
+<% end %>
+
+<div>
+  <%= @quiz.explanation %>
+</div>
+
+<ol id="jquiz">
+  <% @quiz.questions.each do |question| %>
+    <li>
+      <p>
+        <%= question.title %>
+      </p>
+      <ul>
+        <% question.answers.each do |answer| %>
+          <li class="<%= answer.correct? ? 'correct' : '' -%>">
+            <%= answer.title %>
+          </li>
+        <% end %>
+      </ul>
+
+      <div class="explanation hidden">
+        <p>
+          <%= question.reason %>
+        </p>
+      </div>
+    </li>
+  <% end %>
+</ol>
+
+<div id="jquizremarks">
+  <p id="jquiztotal">&nbsp;</p>
+</div>

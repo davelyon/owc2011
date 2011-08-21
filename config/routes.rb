@@ -13,6 +13,7 @@ Owc2011::Application.routes.draw do
   match 'testimonials' => "main#testimonials"
   match 'donate' => "main#donate"
   match 'store' => "main#store"
+  match 'quiz' => "quizzes#quiz"
 
   namespace "admin" do
     resources :donation_campaigns
