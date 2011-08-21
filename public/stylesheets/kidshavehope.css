@@ -89,7 +89,7 @@ html {
 }
 
 body {
-/*  background: rgb(245,245,245) url(/images/background/grid.jpg) repeat-y center top;*/
+  /*background: rgb(245,245,245) url(/images/background/grid.jpg) repeat-y center top;*/
   background: rgb(245,245,245) url(/images/background/bg-graphic.png) no-repeat right top;
   border: 1px solid rgb(255,255,255);
   border-radius:10px;
@@ -427,6 +427,8 @@ div.donation-campaign form.paypal:last-of-type {
 label {  
   color: rgb(50, 50, 50);
   display: block;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1em;
   line-height: 1.5em;
 }
 
@@ -501,4 +503,51 @@ __________________________________________________________ */
 
 img.left {
   margin:0 2em 0 0;
+}
+
+div.newsletter {
+  padding:1.6em !important;
+}
+
+div.newsletter h3 {
+  color: rgb(109, 37, 146);
+  font-size: 1.3125em;
+  line-height: 1.9048em;
+}
+
+div.newsletter-wrapper div.ui-widget-header {  
+ background: transparent;
+ border: none;
+ padding:0.7em;
+}
+
+div.newsletter .ui-widget-header {  
+  background: transparent;  
+}
+
+div.newsletter label {
+   font-size: 1.6em;
+}
+
+div.newsletter input,
+div.newsletter textarea,
+div.newsletter select {  
+  cursor: pointer;
+  font-size: 1.6em;
+  font-style: normal; 
+  font-family: helvetica, arial, san-serif;
+  padding:0.375em;
+  margin: 0 0 1.25em 0;
+  outline: none;
+}
+
+div.newsletter input:not([type="submit"]):not([type="image"]),
+div.newsletter textarea,
+div.newsletter select { 
+  border:1px solid rgba(100, 100, 100, 0.75);
+  width:270px;
+} 
+
+div.newsletter input[type="submit"] {
+  margin:0;
 }

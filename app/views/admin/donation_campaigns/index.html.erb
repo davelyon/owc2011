@@ -1,11 +1,21 @@
-Every dollar counts in the fight to prevent child abuse. To make a donation of your choice, please click on the button below. Thank you!
-<%= paypal_button %>
+<section>
+  <p>
+    Every dollar counts in the fight to prevent child abuse. To make a 
+    donation of your choice, please click on the button below. Thank you!
+  </p>
+  <%= paypal_button %>
 
-<%= link_to 'New Donation Campaign', new_admin_donation_campaign_path %> |
-<%= link_to 'Admin Home', admin_root_path %>
-<hr />
 
-Donation Campaigns:
-<%= render :partial => "donation_campaign", :collection => @donation_campaigns %>
-<br />
+  <h3>
+    Donation Campaigns:
+  </h3>
+  <%= render :partial => "donation_campaign", :collection => @donation_campaigns %>
 
+</section>
+<aside>
+  <h3>Local Navigation</h3>
+  <ul class="no-list-style">
+    <li><%= link_to 'New Donation Campaign', new_admin_donation_campaign_path %></li>
+    <li><%= link_to 'Admin Home', admin_root_path %></li>
+  </ul>
+</aside>

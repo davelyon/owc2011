@@ -1,10 +1,13 @@
-<% form_for [:admin, @kids_corner] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-
-  <%= f.submit %>
-
-<% end %>
+<section>
+  <% form_for [:admin, @kids_corner] do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+    </div>
+    <%= f.submit "Create New Blog Post" %>
+  <% end %>
+</section>

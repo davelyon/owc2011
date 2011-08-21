@@ -1,10 +1,15 @@
-<h1>Kids Corner</h1>
+<section>
+  <h1>Kids Corner</h1>
+  <ul class="no-list-style">
+    <%- @kids_corners.each do |corner| %>
+      <li> <%= link_to corner.title, [:edit, :admin, corner] %> </li>
+    <%- end %>
+  </ul>
+</section>
+<aside>
+  <ul class="no-list-style">
+    <li><%= link_to 'New Blog Post', new_admin_kids_corner_path %></li>
+    <li><%= link_to 'Admin Home', admin_root_path %></li>
+  </ul>
+</aside>
 
-<%= link_to "New Kids Corner", [:new, :admin, :kids_corner] %> |
-<%= link_to "Admin Home", admin_root_path %>
-<hr />
-<ul>
-<%- @kids_corners.each do |corner| %>
-  <li> <%= link_to corner.title, [:edit, :admin, corner] %> </li>
-<%- end %>
-</ul>
