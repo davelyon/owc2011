@@ -13,7 +13,7 @@ Owc2011::Application.routes.draw do
   
   namespace "admin" do
     resources :donation_campaigns
-    resources :events, except: :show
+    resources :events
     resources :fundraisers do
       resources :tickets
     end

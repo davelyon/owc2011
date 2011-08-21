@@ -1,5 +1,5 @@
 class Admin::EventsController < AdminController
-  before_filter :find_event, only: [:update, :edit]
+  before_filter :find_event, only: [:update, :edit, :show]
 
   def index
     @events = Event.all
@@ -11,8 +11,11 @@ class Admin::EventsController < AdminController
 
   def create
     @event = Event.new params[:event]
-    @event.save
-    redirect_to admin_events_path, notice: 'Event successfully created'
+    if @event.save
+      redirect_to admin_new_tweet_path(:message => "Join us for #{@event.name} on #{@event.start_at.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope"), :notice => "Event Added!"
+    else
+      render :new
+    end    
   end
 
   def destroy
@@ -21,9 +24,18 @@ class Admin::EventsController < AdminController
   end
 
   def update
-    @event.update_attributes params[:event]
-    redirect_to admin_events_path, notice: 'Event successfully updated'
+    
+    if @event.update_attributes params[:event]
+      redirect_to admin_events_path, :notice => "Event successfully updated"
+    else
+      render :new
+    end
+
   end
+  
+  def show
+  end
+  
 
   private
   def find_event
