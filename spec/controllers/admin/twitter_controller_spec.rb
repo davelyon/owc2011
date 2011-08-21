@@ -13,27 +13,28 @@ describe Admin::TwitterController do
       Twitter.stub!(:configure)
       Twitter.stub!(:update)
       
-      post :post_tweet
+      post :post_tweet, :post_tweet => {:twitter_post => "I can has tweets!"}
       
-      response.should redirect_to(admin_path)
+      response.should redirect_to(admin_root_path)
     end
     
     it "tweets" do
       configure = mock("Configurer")
-      configure.should_receive(:consumer_key=).with("ABC")
-      configure.should_receive(:consumer_secret=).with("ABC")
-      configure.should_receive(:oauth_token=).with("ABC")
-      configure.should_receive(:oauth_token_secret=).with("ABC")
+      configure.should_receive(:consumer_key=).with(CONFIG[:twitter_consumer_key])
+      configure.should_receive(:consumer_secret=).with(CONFIG[:twitter_consumer_secret])
+      configure.should_receive(:oauth_token=).with(CONFIG[:twitter_oauth_token])
+      configure.should_receive(:oauth_token_secret=).with(CONFIG[:twitter_oauth_token_secret])
       Twitter.should_receive(:configure).once.and_yield(configure)
-      Twitter.should_receive(:update).with("I'm tweeting with @gem!")
+
+      Twitter.should_receive(:update).with("I can has tweets!")
       
-      post :post_tweet
+      post :post_tweet, :post_tweet => {:twitter_post => "I can has tweets!"}
     end
     
     it "deals with twitter's bad attitude" do
-      Twitter.should_receive(:update).and_raise("I'm twitter and I stink!")
+      Twitter.should_receive(:update).and_raise("I can has tweets!")
       
-      post :post_tweet
+      post :post_tweet, :post_tweet => {:twitter_post => "I can has tweets!"}
       
       response.should render_template("error")
     end
