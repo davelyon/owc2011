@@ -1,8 +1,10 @@
 Owc2011::Application.routes.draw do
   devise_for :admin
 
-  resource :facebook_account
+  resource :facebook_account, :only => [:new]
   match '/callback/facebook/:id' => "facebook_accounts#callback", :as => :facebook_callback
+  match '/facebook_account/:id/pages' => 'facebook_accounts#pages', :as => :facebook_pages
+  match '/facebook_account/:id/assign_page' => 'facebook_accounts#assign_page', :as => :assign_facebook_page
 
   match 'admin' => "admin#index", as: :admin_root
 

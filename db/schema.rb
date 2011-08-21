@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110821052929) do
+ActiveRecord::Schema.define(:version => 20110821054911) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(:version => 20110821052929) do
     t.text     "oauth_authorize_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "page_id"
+    t.string   "page_token"
   end
 
   create_table "fundraisers", :force => true do |t|
@@ -77,9 +79,9 @@ ActiveRecord::Schema.define(:version => 20110821052929) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "location"
-    t.text     "image"
     t.datetime "start_at"
     t.datetime "end_at"
+    t.text     "image"
   end
 
   create_table "kids_corners", :force => true do |t|

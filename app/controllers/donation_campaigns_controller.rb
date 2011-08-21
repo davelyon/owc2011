@@ -1,7 +1,7 @@
 class DonationCampaignsController < ApplicationController
 
   def index
-    @donation_campaigns = DonationCampaign.all
+    @donation_campaigns = DonationCampaign.by_amount
   end
 
   def show

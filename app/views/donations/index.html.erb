@@ -5,18 +5,19 @@
     donation of your choice, please click on the button below. Thank 
     you!
   </h2>
-  <p>$15 towards materials for classrooms</p> 
   <p>
     Kids Have Hope uses many different materials in the classroom to 
     help us prevent child abuse, including coloring books, parenting 
-    pamphlets, body safety credit cards, and bully patrol badges. A $15 
-    donation goes a long way towards preventing child abuse.  Thank you!
+    pamphlets, body safety credit cards, and bully patrol badges. 
+  </p>
+  <p>
+    A <strong>$15 donation</strong> goes a long way towards preventing 
+    child abuse.
+    <%= paypal_button %>
   </p>  
-  <%= paypal_button %>
   <h3>Donation Campaigns</h3>
   <p>
-    <%= render :partial => "donation_campaigns/donation", 
-      :collection => @donation_campaigns %>
+    <%= render :partial => "donation_campaigns/donation"%>
     </p>
     <h3>Mail in Donations</h3>
     <p>
