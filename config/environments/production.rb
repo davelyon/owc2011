@@ -47,4 +47,17 @@ Owc2011::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  CONFIG[:twitter_consumer_key] = "X1sZlobxFUduIJwSwY4PA"
+  CONFIG[:twitter_consumer_secret] = "DYGao1Zn6fWs3Qbq5wRmVERGywiYCeOvcrEnUoRVOQ"
+  CONFIG[:twitter_oauth_token] = "358979030-DmCPzxsShBsgyVwst9YAmKWXNzXPbXxJWyCaJXXq"
+  CONFIG[:twitter_oauth_token_secret] = "G6XsBbwmFvtDvWblKs6C1fP2qMmvqjq44SOsCSev4"
+  
+  
+  #REAL PRODUCTION
+  # CONFIG[:twitter_consumer_key] = "UuVfE0E2EQbTkQBOymAhOQ"
+  # CONFIG[:twitter_consumer_secret] = "2yHPoSit6XAIGu7InghHvPI5dV8BzHC37JCpdjMsBs"
+  # CONFIG[:twitter_oauth_token] = " 257199067-lz0Ch5vHV7H9lgJTLzMyo7tdeLjZqKErj7ApyDjk"
+  # CONFIG[:twitter_oauth_token_secret] = "fL6nK64HCOP79AZsLhjklx6t3w6eYtuIWlzXr1rHtYY"
+  
 end

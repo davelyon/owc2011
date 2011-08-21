@@ -24,4 +24,10 @@ Owc2011::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  CONFIG[:twitter_consumer_key] = "X1sZlobxFUduIJwSwY4PA"
+  CONFIG[:twitter_consumer_secret] = "DYGao1Zn6fWs3Qbq5wRmVERGywiYCeOvcrEnUoRVOQ"
+  CONFIG[:twitter_oauth_token] = "358979030-DmCPzxsShBsgyVwst9YAmKWXNzXPbXxJWyCaJXXq"
+  CONFIG[:twitter_oauth_token_secret] = "G6XsBbwmFvtDvWblKs6C1fP2qMmvqjq44SOsCSev4"
+  
 end
