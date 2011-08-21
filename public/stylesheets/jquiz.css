@@ -15,9 +15,11 @@
   #jquiz ol {
     list-style-type: decimal;
   }
+    #jquiz li {
+      list-style: none;
+    }
     #jquiz li p {
       font-weight:bold;
-      
     }
   #jquiz > li {
   padding-top:50px;

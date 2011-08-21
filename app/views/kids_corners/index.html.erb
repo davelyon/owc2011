@@ -1,5 +1,6 @@
 <section>
   <h1>Kids Corner</h1>
+  <%= link_to "Take Our Quiz", "/quiz" if Quiz.find_by_active(true) %>
   <%- @kids_corners.each do |corner| %>
     <h2><%= link_to corner.title, corner %></h2>
     <p><%= simple_format corner.content %></p>
