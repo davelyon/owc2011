@@ -75,18 +75,29 @@ rgb(127,142,190)   - Light Purple
 rgb(149, 101, 168) - Medium Purple
 rgb(109, 37, 146)  - Dark Purple
 
+rgb(3, 106, 180)   - Medium Blue
+
 */
 
 /* =G L O B A L
 __________________________________________________________ */
 
+html {
+  background: rgba(3, 106, 180, 0.45) url(/images/background/texture-bg.jpg);
+}
+
 body {
-  background: url(/images/background/grid.jpg) repeat-y center top;
+  background: rgb(245,245,245) /* url(/images/background/grid.jpg) repeat-y center top*/;
+  border: 1px solid rgb(255,255,255);
+  border-radius:10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
   color: rgb(50, 50, 50);
   font-family: helvetica, arial, sans-serif;
   font-size: 10px;
   margin: 4em auto 0 auto;
-  width:102.4em
+  padding: 2em 3.2em;
+  width:102.4em;
+  text-shadow: 0 1px 0px rgb(255, 255, 255);
 }
 
 div[role="document"] {
@@ -122,6 +133,25 @@ h3 {
   line-height: 1.9048em;
 }
 
+p {
+  padding: 0 0 1.25em 0;
+}
+
+em {
+  font-family: georgia, serif;
+  font-style: italic;
+}
+
+a {
+  color: rgb(3, 106, 180);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
 
 /* =S T R U C T U R A L
 __________________________________________________________ */
@@ -145,8 +175,9 @@ header a#logo {
 nav {
   float: right;
   overflow: hidden;
-  padding: 1.25em 0 0 0;
-  width: 42em;
+  padding: 6.25em 0 0 0;
+  position: relative;
+  width: 31em;
 }
 
 div[role="main"] {
@@ -160,7 +191,6 @@ section {
 }
 
 section p {  
-  padding: 0 0 1.25em 0;
   width: 31em;
 }
 
@@ -168,32 +198,109 @@ section p:last-of-type {
   padding:0;
 }
 
+section figure {  
+  margin:0 0 1.25em 0;
+}
+
+section figure img {
+  border: 1px solid rgb(200, 200, 200);
+}
+
 aside {
+  background:rgba(218, 202, 224, 0.4);
+  border: 1px solid rgba(218, 202, 224, 0.25);
+  border-radius:5px;
   float: left;
-  width: 20em;
+  font-size: 0.8125em;
+  padding: 1.2308em;
+  width: 22.0384em;
 }
 
 footer {
   border-top: 4px double rgba(178,142,190,0.75);
+  color: rgb(80, 80, 80);
   margin: 2.3125em 0 0 0;
   padding: 1.1875em 0 0 0;
 }
+
 /* =L I S T S
 __________________________________________________________ */
 
-nav ul {  
-  float: left;
-  margin: 0 2em 0 0;
-  width: 9em;
+
+ul,
+ol {
+  font-style: italic;
+  font-family: georgia, serif;
+  list-style-position: inside;
+  list-style-type: circle;
+  margin: 0 0 1.25em 0; 
 }
 
-nav ul:last-of-type {
+nav ul {  
+  font-family: helvetica, arial, sans-serif;
+  font-style: normal;
+  list-style-type: none;
+  float: left;
+  margin: 0 3em 0 0;
+  width: 8em;
+}
+
+nav ul.social-media {
+  margin: 0;
+  position: absolute;
+  top:0;
+  right:0;
+  text-align: right;
+  width:100%;
+}
+
+nav ul.social-media li {
+  background: rgba(3, 106, 180,0.75);
+  border: 1px solid rgb(3, 106, 180);
+  border-radius:5px;
+  display: inline-block;
+  height: 2.5em;
+  margin: 0 1em 0 0;
+  text-indent: 9999px;
+  width: 2.5em;
+}
+
+nav ul.social-media li:hover {
+  background: rgb(3, 106, 180);  
+  cursor: pointer;
+}
+
+nav ul.social-media li.subscribe {
+  background-image: url(/images/icons/social-media-icons.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+nav ul.social-media li.facebook {
+  background-image: url(/images/icons/social-media-icons.png);
+  background-position: 0 -40px;
+  background-repeat: no-repeat;
+} 
+
+nav ul.social-media li.twitter {
+  background-image: url(/images/icons/social-media-icons.png);
+  background-position: 0 -80px;
+  background-repeat: no-repeat;
+}
+
+nav ul.social-media li:last-of-type {
+   margin:0; 
+}
+
+nav ul:nth-child(3) {
   margin:0;
 }
 
-section ul {  
- font-family: georgia, serif;
- font-style: italic;
- list-style-type: circle;
- margin: 0 0 1.25em 0; 
+footer ul { 
+  font-family: helvetica, arial, sans-serif;
+  font-size: 0.8125em;
+  font-style: normal;
+  list-style-type: none;
+  margin: 0;
 }
+

@@ -10,7 +10,7 @@
   <body>
     <div role="document">
       <header>
-        <a href="#" id="logo" title="Back to Home">
+        <a href="/" id="logo" title="Back to Home">
           <img src="images/logo/logo.png"
                alt="Kids Have Hope Logo"
                height="200"
@@ -30,10 +30,10 @@
             <li><%= link_to 'Contact Us', new_contact_request_path %></li>
             <li><%= link_to 'Testimonials', testimonials_path %></li>
           </ul>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Subscribe</a></li>
+          <ul class="social-media">
+            <li class="facebook"><a href="#">Facebook</a></li>
+            <li class="twitter"><a href="#">Twitter</a></li>
+            <li class="subscribe"><a href="#">Subscribe</a></li>
           </ul>
         </nav>
       <%- flash.each do |name, msg| %>
@@ -45,11 +45,15 @@
     </div>
     <footer role=contentinfo">
       <ul>
-        <li>Child Abuse Prevention | Kids Have Hope</li>
+        <li>Kids Have Hope</li>
         <li>Chicago, IL</li>
-        <li>melicurk@kidshavehope.org</li>
+        <li>
+          <a href="mailto:melicurk@kidshavehope.org">
+            melicurk@kidshavehope.org
+          </a>
+        </li>
         <li>1-888-806-8481</li>
-        <li>Copyright 2011 Kids Have Hope. All rights reserved</li>
+        <li>Copyright &copy; 2011 Kids Have Hope.&nbsp; <em>All rights reserved</em></li>
       </ul>
     </footer>
   </div>
