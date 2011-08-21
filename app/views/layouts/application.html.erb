@@ -46,6 +46,9 @@
     </div>
     <footer role="contentinfo" itemscope itemtype="http://schema.org/Organization">
       <ul>
+        <% if current_admin %>
+          <li><%= link_to "Logout", destroy_admin_session_path %></li>
+        <% end %>
         <li itemprop="name">Kids Have Hope</li>
         <li itemscope itemtype="http://schema.org/Organization">
           <span itemprop="addressLocality">Chicago</span>, 
