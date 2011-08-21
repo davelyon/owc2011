@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Admin::DonationCampaignsController do
   before :each do
+    controller.stub!(:authenticate_admin!)
     sign_in_admin_user
     @donation_campaign = DonationCampaign.create!(:title => "campaign")
   end

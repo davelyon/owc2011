@@ -1,3 +1,3 @@
 class Ticket < ActiveRecord::Base
-  belongs_to :fundraisers
+  belongs_to :fundraiser
 end

@@ -17,6 +17,7 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
+  gem 'factory_girl_rails'
   gem 'jasmine'
   gem 'launchy'
   gem 'pickle'

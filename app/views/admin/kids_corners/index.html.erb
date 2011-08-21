@@ -1,0 +1,6 @@
+<%= link_to "New Kids Corner", [:new, :admin, :kids_corner] %>
+<ul>
+<%- @kids_corners.each do |corner| %>
+  <li> <%= link_to corner.title, [:edit, :admin, corner] %> </li>
+<%- end %>
+</ul>

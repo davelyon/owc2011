@@ -3,3 +3,7 @@ Every dollar counts in the fight to prevent child abuse. To make a donation of y
 
 Donation Campaigns:
 <%= render :partial => "donation_campaign", :collection => @donation_campaigns %>
+<br />
+
+<%= link_to 'create', new_admin_donation_campaign_path %> | 
+<%= link_to 'admin home', admin_root_path %>

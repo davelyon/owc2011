@@ -1,4 +1,5 @@
 class Admin::DonationCampaignsController < AdminController
+  before_filter :authenticate_admin!
   before_filter :find_donation_campaign, :except => [:index, :new, :create, :successful]
 
   def index
