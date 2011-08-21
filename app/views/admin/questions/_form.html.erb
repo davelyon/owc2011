@@ -1,7 +1,12 @@
 <%= form_for [:admin, @quiz, @question] do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-  <%= form.label :reason %>
-  <%= form.text_area :reason %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :reason %>
+    <%= form.text_area :reason %>
+  </div>
   <%= form.submit %>
 <% end %>
+<%= link_to 'quiz', [:admin, @quiz, Question.new] %>

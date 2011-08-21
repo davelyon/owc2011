@@ -1,0 +1,14 @@
+<%= form_for [:admin, @quiz, @question, @answer] do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :correct %>
+    <%= form.check_box :correct %>
+  </div>
+
+    <%= form.submit %>
+<% end %>
+<%= link_to 'Question', [:admin, @quiz, @question, Answer.new] %>

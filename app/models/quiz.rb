@@ -1,7 +1,7 @@
 class Quiz < ActiveRecord::Base
   validates :title, :explanation, presence: true
 
-  has_many :questions
+  has_many :questions, dependent: :destroy
 
   after_save :mark_only_one_as_active
 

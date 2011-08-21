@@ -1,8 +1,14 @@
+<h1>Quiz: <%= @quiz.title %></h1>
+<h2>Question: <%= @question.title %></h2>
+<h3>Answers</h3>
 <ul>
   <% @answers.each do |answer| %>
     <li>
       <span><%= answer.title %></span>
+      <%= link_to 'Edit', [:edit, :admin, @quiz, @question, answer] %>
+      <%= link_to 'Delete', [:admin, @quiz, @question, answer], method: :delete %>
     </li>
   <% end %>
 </ul>
-<%= link_to 'New Answer', new_admin_quiz_question_answer_path(@answer) %>
+<%= link_to 'New Answer', new_admin_quiz_question_answer_path(@quiz, @question) %>
+<%= link_to 'Quiz', [:admin, @quiz, Question.new] %>
