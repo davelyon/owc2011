@@ -155,7 +155,7 @@ blockquote p:last-of-type {
   padding-bottom:0;
 }
 
-section cite {
+cite {
   color:rgb(149, 101, 168);
   display: block;
   font-family: georgia, serif;
