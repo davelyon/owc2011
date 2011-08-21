@@ -2,9 +2,9 @@
   <h1>Contact Us</h1>
   <h2>Learn more about the prevention of child abuse.</h2>
   <p>
-    Please let us know if you have any questions or comments or if you are 
-    interested in having a <a href="http://kidshavehope.org/about_us">
-      Licensed Social Worker</a> visit your school. 
+    Please let us know if you have any questions or comments or if you are
+    interested in having a <a href="<%= about_path %>">
+      Licensed Social Worker</a> visit your school.
   </p>
   <%= render 'shared/form_errors', object: @contact_request %>
   <%= form_for @contact_request do |f| %>
@@ -50,8 +50,8 @@
     <li itemprop="name">Kids Have Hope</li>
     <li itemprop="postOfficeBoxNumber">P.O. Box 221066</li>
     <li>
-      <span itemprop="addressLocality">Chicago</span>, 
-      <span itemprop="addressRegion">IL</span> 
+      <span itemprop="addressLocality">Chicago</span>,
+      <span itemprop="addressRegion">IL</span>
       <span itemprop="postalCode">60622</span>
     </li>
   </ul>

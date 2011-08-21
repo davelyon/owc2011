@@ -4,4 +4,3 @@ Then /^(?:|I )should see the following list:$/ do |table|
   end
 end
 
-

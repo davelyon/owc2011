@@ -1,18 +1,18 @@
 <section>
   <h1>Child Abuse Prevention</h1>
   <h2>
-    Kids Have Hope is a Chicago based 501c3 non-profit organization 
-    dedicated to preventing the physical and sexual abuse of children 
+    Kids Have Hope is a Chicago based 501c3 non-profit organization
+    dedicated to preventing the physical and sexual abuse of children
     through empowerment and education.
   </h2>
   <figure>
-    <img src="images/content/contemplative-child.jpg" 
+    <img src="/images/content/contemplative-child.jpg" 
           width="496"
          alt="" />
   </figure>
   <h3>What We Do</h3>
   <p>
-    Kids Have Hope provides an evidence-based curriculum 
+    Kids Have Hope provides an evidence-based curriculum
     on prevention and awareness of abuse including:
   </p>
   <ul>
@@ -23,24 +23,24 @@
     <li>Bullying</li>
   </ul>
   <p>
-    We provide this service to students in  pre-school through 6th 
-    grade. We offer educational in-services to schools and 
-    communities which help prevent and detect child sexual 
-    abuse by raising awareness and implementing effective 
+    We provide this service to students in  pre-school through 6th
+    grade. We offer educational in-services to schools and
+    communities which help prevent and detect child sexual
+    abuse by raising awareness and implementing effective
     strategies. 
   </p>
   <p>
-    Our information sessions are designed for 
-    teachers, faculty, parents, health care providers and 
-    community members who want to prevent and detect child 
+    Our information sessions are designed for
+    teachers, faculty, parents, health care providers and
+    community members who want to prevent and detect child
     sexual abuse.
   </p>
   <h3>Request Professional Assistance</h3>
   <p>
-    We are available to answer questions about child abuse or 
-    you can setup a meeting with one of our Licensed Social 
+    We are available to answer questions about child abuse or
+    you can setup a meeting with one of our Licensed Social
     Workers who can explain, in detail, our various programs.
-    Contact us for an initial meeting and take a stand to stop child 
+    Contact us for an initial meeting and take a stand to stop child
     sexual abuse.
   </p>
 </section>
@@ -84,11 +84,14 @@
     <li><strong>Childhelp</strong></li>
     <li>Child Abuse Hotline: 1-800-4-A-CHILD.</li>
   </ul>
+  <ul class="no-list-style">
+    <li><strong><a href="#" class='newsletter'>Subscribe to our Newsletter</a></strong></li>
+  </ul>
 </aside>
-<aside>
+<div class="newsletter">
   <% form_tag newsletter_subscriptions_path, method: :post do %>
-    <%= label_tag :email, "Subscribe to our newsletter!" %>
+    <%= label_tag :email, "Enter your e-mail address" %>
     <%= text_field_tag :email %>
     <%= submit_tag 'Subscribe' %>
   <% end -%>
-</aside>
+</div>

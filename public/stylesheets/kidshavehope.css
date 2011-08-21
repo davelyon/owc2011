@@ -160,7 +160,7 @@ cite {
   display: block;
   font-family: georgia, serif;
   font-style: italic;
-  padding: 0.625em 0 0 0;
+  padding: 0.625em 5em 0 0 !important;
   text-align: right;
 }
 
@@ -237,7 +237,8 @@ section figure img {
   border: 1px solid rgb(180, 180, 180);
 }
 
-section *:last-child {
+section ul:last-child,
+section p:last-child {
   padding:0;
   margin-bottom:0;
 }
