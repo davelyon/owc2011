@@ -14,6 +14,9 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/'
 
+    when /^the successful donation page for ticket "(?<title>[^"]*)"$/
+      ticket = Ticket.find_by_title $~[:title]
+      successful_donations_path custom: ticket.id
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

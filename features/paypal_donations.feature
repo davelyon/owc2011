@@ -8,8 +8,9 @@ Feature: PayPal donations
     Then I should see a PayPal button
     
     #return variable
-  Scenario: Donation Completed
+  Scenario: User Specified Donation Completed
     When I am on the donations page
+    Then show me the page
     Then the PayPal button should set the return to the successful donation page
     When I am on the successful donations page
     Then I should see "Thank you for supporting Kids Have Hope"  

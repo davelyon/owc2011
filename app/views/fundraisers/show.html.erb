@@ -6,7 +6,8 @@
       <h2><%= ticket.title %></h2>
       <p><%= ticket.description %></p>
       <span><%= number_to_currency ticket.amount %></span>
-      <%= paypal_button amount: ticket.amount, name: ticket.title %>
+      <span><%= pluralize ticket.quantity, 'ticket' %> left<span>
+      <%= paypal_button :amount => ticket.amount, :name => ticket.title, :ticket_id => ticket.id %>
     </li>
   <% end -%>
 </ul>

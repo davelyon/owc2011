@@ -2,6 +2,11 @@ module DonationsHelper
   def paypal_button(options={})
     amount = "%.2f" % options[:amount] if options[:amount]
     name = options[:name] || 'Donation'
+    if options[:ticket_id]
+      return_url = successful_donations_url(:custom => options[:ticket_id])
+    else
+      return_url = successful_donations_url
+    end
     html = <<-HTML
       <form alt="PayPal Donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class ="paypal">
         <input type="hidden" value="_donations" name="cmd">
@@ -18,7 +23,9 @@ module DonationsHelper
         <input type="hidden" value="yahoo-sitesolution" name="bn">
         <input type="hidden" value="C3MGKKUCCAB9J" name="pal">
         <input type="hidden" value="R-5AJ59462NH120001H" name="mrb">
-        <input type="hidden" value="#{successful_donations_url}" name="return">
+        
+        <input type="hidden" value="#{return_url}" name="return">
+        
         <input type="image" alt="PayPal Donate" src="http://us.i1.yimg.com/us.yimg.com/i/us/smallbiz/gr/paypal_x_click_but04_enabled.gif">
       </form>
     HTML

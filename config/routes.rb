@@ -35,8 +35,8 @@ Owc2011::Application.routes.draw do
 
   resources :donations, :only => [:index] do
     collection do
-      get :successful
-      post '/successful' => redirect('/donations/successful') #paypal is going to redirect with POST
+      post 'successful' => 'donations#callback'
+      get 'successful'
     end
   end
 
