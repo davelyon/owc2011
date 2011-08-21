@@ -4,10 +4,9 @@
   <%= form.text_field :name %>
   <br />
   <%= form.label :start_at %>
-  <%= form.text_field :start_at %>
-  <br />
+  <%= form.datetime_select :start_at %>
   <%= form.label :end_at %>
-  <%= form.text_field :end_at %>
+  <%= form.datetime_select :end_at %>
   <br />
   <%= form.label :description %>
   <%= form.text_area :description, :size => "30x7"%>

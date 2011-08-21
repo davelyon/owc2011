@@ -2,9 +2,6 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 
-
-
-
 $(document).ready(function() {
   $("#post_tweet_twitter_post").keyup(function() {
     var current = $("#post_tweet_twitter_post").attr("value");
