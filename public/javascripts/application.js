@@ -11,3 +11,8 @@ function update_character() {
 
 
 $(document).ready(update_character);
+
+$(document).ready(function(){
+  $(".datepicker").datepicker({ dateFormat: 'yy-mm-dd'});
+  
+});
