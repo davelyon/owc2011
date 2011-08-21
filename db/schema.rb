@@ -77,9 +77,9 @@ ActiveRecord::Schema.define(:version => 20110821003737) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "location"
+    t.text     "image"
     t.datetime "start_at"
     t.datetime "end_at"
-    t.text     "image"
   end
 
   create_table "kids_corners", :force => true do |t|

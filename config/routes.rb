@@ -18,6 +18,7 @@ Owc2011::Application.routes.draw do
     resources :fundraisers do
       resources :tickets
     end
+    resources :kids_corners
 
     resources :socials, only: [:new, :create], :path => "social"
   end
