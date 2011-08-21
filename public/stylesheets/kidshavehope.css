@@ -71,7 +71,9 @@ Grid:
 
 Colors:
 
-rgb(1278,142,190) - Light Purple
+rgb(127,142,190)   - Light Purple
+rgb(149, 101, 168) - Medium Purple
+rgb(109, 37, 146)  - Dark Purple
 
 */
 
@@ -80,6 +82,7 @@ __________________________________________________________ */
 
 body {
   background: url(/images/background/grid.jpg) repeat-y center top;
+  color: rgb(50, 50, 50);
   font-family: helvetica, arial, sans-serif;
   font-size: 10px;
   margin: 4em auto 0 auto;
@@ -96,8 +99,28 @@ div[role="document"] {
 /* =T Y P O G R A P H Y
 __________________________________________________________ */
 
+h1 {  
+  color: rgb(109, 37, 146);
+  font-size: 2.375em;
+  line-height: 1em;
+  margin: 0 0 1em 0;
+}
 
+h2 {
+  color: rgb(149, 101, 168);
+  font-family: georgia, serif;
+  font-size: 1.4286em;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.32em;
+  margin: 0 0 0.8em 0;
+}
 
+h3 {
+  color: rgb(109, 37, 146);
+  font-size: 1.3125em;
+  line-height: 1.9048em;
+}
 
 
 /* =S T R U C T U R A L
@@ -106,7 +129,7 @@ __________________________________________________________ */
 header {
   border-bottom: 4px double rgba(178,142,190,0.75);
   overflow: hidden;
-  margin: 0 0 2.5em 0;
+  margin: 0 0 2.3125em 0;
   padding: 0 0 1.1875em 0;
 }
 
@@ -126,10 +149,23 @@ nav {
   width: 42em;
 }
 
+div[role="main"] {
+  overflow: hidden;
+}
+
 section {
   float: left;
   margin: 0 2em 0 0;
   width: 42em;
+}
+
+section p {  
+  padding: 0 0 1.25em 0;
+  width: 31em;
+}
+
+section p:last-of-type {
+  padding:0;
 }
 
 aside {
@@ -137,6 +173,11 @@ aside {
   width: 20em;
 }
 
+footer {
+  border-top: 4px double rgba(178,142,190,0.75);
+  margin: 2.3125em 0 0 0;
+  padding: 1.1875em 0 0 0;
+}
 /* =L I S T S
 __________________________________________________________ */
 
@@ -148,4 +189,11 @@ nav ul {
 
 nav ul:last-of-type {
   margin:0;
+}
+
+section ul {  
+ font-family: georgia, serif;
+ font-style: italic;
+ list-style-type: circle;
+ margin: 0 0 1.25em 0; 
 }
