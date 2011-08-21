@@ -1,6 +1,7 @@
 class Admin::QuestionsController < AdminController
 
   before_filter :find_quiz
+  before_filter :find_question, only: [:edit, :destroy, :update]
 
   def index
     @questions = @quiz.questions
@@ -21,7 +22,6 @@ class Admin::QuestionsController < AdminController
   end
 
   def update
-    @question = @quiz.questions.find params[:id]
     if @question.update_attributes params[:question]
       redirect_to admin_quiz_questions_path(@quiz), notice: "Question successfully created."
     else
@@ -30,11 +30,10 @@ class Admin::QuestionsController < AdminController
   end
 
   def edit
-    @question = @quiz.questions.find params[:id]
   end
 
   def destroy
-    @quiz.questions.destroy params[:id]
+    @question.destroy
     redirect_to admin_quiz_questions_path(@quiz), notice: "Question successfully deleted."
   end
 
@@ -42,5 +41,9 @@ class Admin::QuestionsController < AdminController
 
   def find_quiz
     @quiz = Quiz.find(params[:quiz_id])
+  end
+
+  def find_question
+    @question = @quiz.questions.find params[:id]
   end
 end
