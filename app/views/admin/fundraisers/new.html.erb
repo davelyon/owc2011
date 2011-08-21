@@ -1,23 +1,27 @@
 <%= form_for [:admin, @fundraiser] do |form| %>
-
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <br />
-  <%= form.label :start_at %>
-  <%= form.text_field :start_at, :class => "datepicker"%>
-  <br />
-  <%= form.label :end_at %>
-  <%= form.text_field :end_at, :class => "datepicker"%>
-  <br />
-  <%= form.label :description %>
-  <%= form.text_area :description, :size => "30x7"%>
-  <br />
-  <%= form.label :location %>
-  <%= form.text_field :location %>
-  <br />
-  <%= form.label :image %>
-  <%= form.text_area :image, :size => "20x7"%>
-
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :start_at %>
+    <%= form.text_field :start_at, :class => "datepicker"%>
+  </div>
+  <div>
+    <%= form.label :end_at %>
+    <%= form.text_field :end_at, :class => "datepicker"%>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description, :size => "30x7"%>
+  </div>
+  <div>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  <div>
+    <%= form.label :image %>
+    <%= form.text_area :image, :size => "20x7"%>
+  </div>
   <%= form.submit "Save"%>
 
 <% end %>

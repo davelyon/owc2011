@@ -1,12 +1,15 @@
 <%= form_for [:admin, @donation_campaign] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :amount %>
-  <%= f.text_field :amount %>
-
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
   <%= f.submit "Submit" %>
 <% end %>
