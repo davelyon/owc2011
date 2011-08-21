@@ -1,3 +1,9 @@
-<% @donation_campaigns.each do |donation| %> 
-  <%= donation.title %>
-<%end%>
+<ul>
+  <% @donation_campaigns.each do |donation| %> 
+    <li>
+      <%= donation.title %> for $<%= donation.amount%> | <%= paypal_button %>
+      <br />
+      <%= donation.description%>
+    </li>
+  <%end%>
+</ul>

@@ -3,7 +3,7 @@ module DonationsHelper
     amount = "%.2f" % options[:amount] if options[:amount]
     name = options[:name] || 'Donation'
     html = <<-HTML
-      <form alt="PayPal Donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <form alt="PayPal Donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class ="paypal">
         <input type="hidden" value="_donations" name="cmd">
         <input type="hidden" value="melicurk@kidshavehope.org" name="business">
         <input type="hidden" value="#{name}" name="item_name">

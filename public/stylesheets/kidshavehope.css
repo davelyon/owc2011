@@ -32,6 +32,7 @@ Contents:
 3) =STRUCTURAL
 4) =LISTS
 5) =FORMS
+6) =CUSTOM
 
 Modular Scale: 
 
@@ -171,12 +172,12 @@ em {
 }
 
 a {
-  color: rgb(3, 106, 180);
+  color: rgba(3, 106, 180,0.75);
   text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: none;
+  color: rgb(3, 106, 180);
 }
 
 
@@ -222,7 +223,7 @@ section p {
   width: 31em;
 }
 
-section p:last-child {
+section p:last-child { 
   padding:0;
 }
 
@@ -234,6 +235,11 @@ section figure img {
   border: 1px solid rgb(180, 180, 180);
 }
 
+section *:last-child {
+  padding:0;
+  margin-bottom:0;
+}
+
 aside {
   background:rgba(218, 202, 224, 0.4);
   border: 1px solid rgba(218, 202, 224, 0.25);
@@ -242,6 +248,10 @@ aside {
   font-size: 0.8125em;
   padding: 1.2308em;
   width: 22.0384em;
+}
+
+aside p:last-of-type {
+  padding:0;
 }
 
 footer {
@@ -270,12 +280,10 @@ ul.no-list-style {
 nav ul {  
   font-family: helvetica, arial, sans-serif;
   font-style: normal;
-  letter-spacing: 0.1em;
   line-height: 1.85em;
   list-style-type: none;
   float: left;
   margin: 0 2em 0 0;
-  text-transform: uppercase;
   width: 9em;
 }
 
@@ -372,7 +380,7 @@ select {
   outline: none;
 }
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="image"]),
 textarea,
 select { 
   border:1px solid rgba(100, 100, 100, 0.75);
@@ -398,7 +406,7 @@ input[type="submit"]:hover {
  background: rgb(3, 106, 180);
 }
 
-input:not([type="submit"]):hover,
+input:not([type="submit"]):hover:not([type="image"]):hover,
 textarea:hover { 
   border:1px solid rgb(100, 100, 100);
 } 
@@ -416,4 +424,15 @@ input[type="tel"] {
 
 textarea {
   height: 12.5em;
+}
+
+/* =C U S T O M
+__________________________________________________________ */
+
+.left {  
+  float: left;
+}
+
+img.left {
+  margin:0 2em 0 0;
 }
