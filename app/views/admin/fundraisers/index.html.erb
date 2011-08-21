@@ -1,4 +1,9 @@
-<h1> All Fundraisers</h1>
+<h2> All Fundraisers</h2>
+<div class="button">
+  <%= link_to "New Fundraiser", new_admin_fundraiser_path%> |
+  <%= link_to 'Admin Home', admin_root_path %>
+</div>
+<hr />
 <table>
   <colgroup>
     <col></col>
@@ -22,8 +27,4 @@
   <%end%>
 </table>
 <br />
-<div class="button">
-  <%= link_to "Add a new Fundraiser", new_admin_fundraiser_path%> | 
-  <%= link_to 'admin home', admin_root_path %>  
-</div>
-  
+

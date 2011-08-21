@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Kids Have Hope</title>
-    <%= stylesheet_link_tag "reset", "kidshavehope", "jquery" %>
+    <%= stylesheet_link_tag "reset", "kidshavehope", "jquery", "event_calendar" %>
     <link href="/images/logo/favicon.png" rel="icon" type="image/png">
     <%= javascript_include_tag 'jquery.min.js', 'jquery-ui.js'%>
     <%= javascript_include_tag :defaults %>
@@ -33,9 +33,8 @@
             <li><%= link_to 'Testimonials', testimonials_path %></li>
           </ul>
           <ul class="social-media">
-            <li class="facebook"><a href="#">Facebook</a></li>
-            <li class="twitter"><a href="#">Twitter</a></li>
-            <li class="subscribe"><a href="#">Subscribe</a></li>
+            <li class="facebook"><a href="http://www.facebook.com/pages/Kids-Have-Hope/169968913527">Facebook</a></li>
+            <li class="twitter"><a href="http://twitter.com/#!/kidshavehope">Twitter</a></li>
           </ul>
         </nav>
       <%- flash.each do |name, msg| %>

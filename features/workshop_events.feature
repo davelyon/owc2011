@@ -22,7 +22,7 @@ Feature: Workshop events
 
   Scenario: create
     Given I follow "Workshop Events"
-    And I follow "create"
+    And I follow "New Workshop Event"
     And I fill in the following:
 			| Name        | Good Touch, Bad Touch              |
 			| Location    | Caleb's pad                        |
@@ -37,7 +37,7 @@ Feature: Workshop events
 	Scenario: edit
 		Given an event exists with name: "Good Touch, Bad Touch"
     And I follow "Workshop Events"
-		And I follow "edit" within the "Good Touch, Bad Touch" section
+		And I follow "Edit" within the "Good Touch, Bad Touch" section
 		And I fill in "Name" with "herp derp"
 		When I press "Update"
 		Then I should see the following list:
@@ -47,7 +47,7 @@ Feature: Workshop events
 	Scenario: destroy
 		Given an event exists with name: "Good Touch, Bad Touch"
     And I follow "Workshop Events"
-		When I follow "delete" within the "Good Touch, Bad Touch" section
+		When I follow "Delete" within the "Good Touch, Bad Touch" section
 		Then I should be on the admin events page
 		And I should see "Event successfully deleted"
 		And I should not see "Good Touch, Bad Touch"

@@ -1,12 +1,15 @@
+<h2> Workshop Events </h2>
+
+<%= link_to 'New Workshop Event', new_admin_event_path %> |
+<%= link_to 'Admin Home', admin_root_path %>
+<hr />
+
 <ul>
   <% @events.each do |event| %>
     <li>
       <span><%= link_to event.name, admin_event_path(event) %></span>
-      <%= link_to 'edit', edit_admin_event_path(event) %>
-      <%= link_to 'delete', [:admin, event], method: :delete %>
+      <%= link_to 'Edit', edit_admin_event_path(event) %>
+      <%= link_to 'Delete', [:admin, event], method: :delete %>
     </li>
   <% end %>
 </ul>
-
-<%= link_to 'create', new_admin_event_path %> | 
-<%= link_to 'admin home', admin_root_path %>

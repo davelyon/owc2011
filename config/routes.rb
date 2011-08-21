@@ -22,7 +22,9 @@ Owc2011::Application.routes.draw do
     end
     resources :kids_corners
 
-    resources :quizzes
+    resources :quizzes do
+      resources :questions
+    end
 
     resources :socials, only: [:new, :create], :path => "social"
   end
