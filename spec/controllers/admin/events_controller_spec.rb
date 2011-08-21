@@ -61,7 +61,7 @@ describe Admin::EventsController do
       it "redirects to the event index page" do
         post :create, :event => valid_event_attributes
   
-        response.should redirect_to new_admin_social_path(:message => "Join us for #{event.name} on #{event.start_at.strftime('%M/%d/%Y@%H:%M')} #KidsHaveHope")
+        response.should redirect_to new_admin_social_path(:message => "Join us for #{event.name} on #{event.start_at.strftime('%m/%d/%Y@%H:%M')} #KidsHaveHope")
       end
       
     end

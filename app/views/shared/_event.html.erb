@@ -1,9 +1,9 @@
 <h1><%= event.name %></h1>
 <dl>
   <dt>Start:</dt>
-  <dd><%= event.start_at %></dd>
+  <dd><%= event.start_at.strftime('%m/%d/%Y@ %H:%M %p') %></dd>
   <dt>End:</dt>
-  <dd><%= event.end_at %></dd>
+  <dd><%= event.end_at.strftime('%m/%d/%Y@ %H:%M %p') %></dd>
   <dt>Location:</dt>
   <dd><%= event.location %></dd>
   <dt>Description:</dt>
