@@ -6,7 +6,7 @@
     through empowerment and education.
   </h2>
   <figure>
-    <img src="images/content/contemplative-child.jpg"
+    <img src="/images/content/contemplative-child.jpg" 
           width="496"
          alt="" />
   </figure>
@@ -84,11 +84,14 @@
     <li><strong>Childhelp</strong></li>
     <li>Child Abuse Hotline: 1-800-4-A-CHILD.</li>
   </ul>
+  <ul class="no-list-style">
+    <li><strong><a href="#" class='newsletter'>Subscribe to our Newsletter</a></strong></li>
+  </ul>
 </aside>
-<aside>
+<div class="newsletter">
   <% form_tag newsletter_subscriptions_path, method: :post do %>
-    <%= label_tag :email, "Subscribe to our newsletter!" %>
+    <%= label_tag :email, "Enter your e-mail address" %>
     <%= text_field_tag :email %>
     <%= submit_tag 'Subscribe' %>
   <% end -%>
-</aside>
+</div>
